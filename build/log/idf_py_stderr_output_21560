@@ -1,0 +1,12 @@
+Command: ninja flash
+CMake Error at D:/ESP32-IDF/esp-idf-v5.5.1/tools/cmake/build.cmake:328 (message):
+  Failed to resolve component 'esp_console' required by component 'main':
+  unknown name.
+Call Stack (most recent call first):
+  D:/ESP32-IDF/esp-idf-v5.5.1/tools/cmake/build.cmake:371 (__build_resolve_and_add_req)
+  D:/ESP32-IDF/esp-idf-v5.5.1/tools/cmake/build.cmake:685 (__build_expand_requirements)
+  D:/ESP32-IDF/esp-idf-v5.5.1/tools/cmake/project.cmake:740 (idf_build_process)
+  CMakeLists.txt:8 (project)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

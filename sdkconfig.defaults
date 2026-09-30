@@ -1,0 +1,181 @@
+# =============================================================================
+# Roll Coater HMI —— 默认 sdkconfig（ESP32-S3R8 / 8MB Flash / 8MB PSRAM）
+# 说明：本文件只放"必须显式指定"的项，其余保持 IDF/LVGL 默认值。
+# =============================================================================
+
+# --- 目标芯片与 Flash ---
+CONFIG_IDF_TARGET="esp32s3"
+CONFIG_ESPTOOLPY_FLASHSIZE_8MB=y
+CONFIG_ESPTOOLPY_FLASHMODE_QIO=y
+CONFIG_ESPTOOLPY_FLASHFREQ_80M=y
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+
+# --- CPU / Cache ---
+# 240MHz + 64KB DataCache/64B Line：RGB 屏由 PSRAM 帧缓冲经 DMA 搬运，
+# 这个组合是 800x480 RGB 稳定出图的基础。
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_240=y
+CONFIG_ESP32S3_INSTRUCTION_CACHE_32KB=y
+CONFIG_ESP32S3_DATA_CACHE_64KB=y
+CONFIG_ESP32S3_DATA_CACHE_LINE_64B=y
+CONFIG_COMPILER_OPTIMIZATION_PERF=y
+
+# --- PSRAM（ESP32-S3R8 = Octal PSRAM 8MB）---
+# 双倍帧缓冲方案需要 2 x 800x480x2B = 1.5MB PSRAM
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_MODE_OCT=y
+CONFIG_SPIRAM_SPEED_80M=y
+CONFIG_SPIRAM_MEMTEST=n
+# PSRAM 只用于 RGB 帧缓冲，不需要把代码/只读数据搬进 PSRAM。
+CONFIG_SPIRAM_XIP_FROM_PSRAM=n
+CONFIG_SPIRAM_FETCH_INSTRUCTIONS=n
+CONFIG_SPIRAM_RODATA=n
+
+# --- FreeRTOS ---
+# 1kHz tick：motion_task 的梯形曲线按 ms 级步长积分，1ms 分辨率更平滑。
+CONFIG_FREERTOS_HZ=1000
+# 看门狗：LVGL 任务里若 I2C 触摸挂死需要能复位，给足余量减少误报。
+CONFIG_ESP_TASK_WDT_TIMEOUT_S=10
+CONFIG_ESP_MAIN_TASK_STACK_SIZE=8192
+
+# --- RGB 面板实时性 ---
+# LCD_RGB_RESTART_IN_VSYNC：每个 VBlank 重置一次 GDMA 通道。
+#   官方定位是「DMA 供不上 LCD 消耗速度时」的兜底，用来防止永久错位。
+#   但它每帧都重置 DMA，在已经稳定的板子上反而会带来"每帧轻轻一眨"的闪烁，
+#   而实时性问题现在由 bounce buffer + 内部 RAM 绘制缓冲 + PCLK 12MHz 解决了，
+#   所以默认关掉。
+#   ★ 如果画面重新出现「横向抖动 / 花屏」，先把它改回 =y 试试。
+# CONFIG_LCD_RGB_RESTART_IN_VSYNC is not set
+
+# RGB 面板像素时钟 PCLK（画质总开关，也可在这里直接改，不用进 menuconfig）：
+#   12 -> 29.3Hz 最稳；16 -> 39.0Hz 默认；18 -> 43.9Hz；24 -> 58.5Hz
+#   画面"微微在闪"（大块浅色区尤其明显）多为帧率偏低 -> 往上调
+#   出现横向抖动/花屏 -> PSRAM 带宽喂不上 bounce buffer -> 往下调
+CONFIG_ROLLCOATER_LCD_PCLK_MHZ=16
+
+# --- printf ---
+# UI 用 snprintf("%.3f") 格式化读数，必须关闭 nano 版 printf（nano 不支持浮点）。
+CONFIG_LIBC_NEWLIB_NANO_FORMAT=n
+
+# =============================================================================
+# LVGL 8.3.x
+# =============================================================================
+# 屏为 16bit RGB565，必须 16 位色深。
+CONFIG_LV_COLOR_DEPTH_16=y
+# RGB 并行数据线 D0..D15 = B1..B5,G0..G5,R1..R5，与 LVGL RGB565 内存布局一致，
+# 所以不做字节交换。若上屏后出现红蓝互换，把下一行改成 =y 再试。
+CONFIG_LV_COLOR_16_SWAP=n
+# 使用系统堆（malloc）分配 LVGL 内存，避免内置小内存池在大屏下 OOM。
+CONFIG_LV_MEM_CUSTOM=y
+CONFIG_LV_MEM_SIZE_KILOBYTES=48
+
+# 刷新周期的初值。★ 实际值由 bsp_display.c 在运行时按
+#   「面板帧周期 x 1.25」（即 LVGL 比面板慢 20%）自动设置，见
+#   bsp_calc_lvgl_period_ms()，所以这里填什么都不影响最终刷新率，
+#   只是 LVGL 初始化到注册显示之间的短暂缺省值。
+# 关键原则：LVGL 必须**明显慢于**面板。两者接近会差频（画面微微在闪），
+# LVGL 更快则持续提交新帧、和面板扫描抢 PSRAM 带宽。
+CONFIG_LV_DISP_DEF_REFR_PERIOD=40
+CONFIG_LV_DPI_DEF=60
+
+CONFIG_LV_SPRINTF_USE_FLOAT=y
+CONFIG_LV_USE_LOG=y
+CONFIG_LV_LOG_LEVEL_WARN=y
+
+# --- 字体 ---
+# 界面文字现在用 main/fonts/ 下的 4 个真粗体字库（Lato Bold 50/44/35/25），
+# 内置 Montserrat 只剩两个用途，所以只需要开这两级：
+#   16 -> 小字提示（如输入页的错误提示）
+#   32 -> 键盘上的符号字形 ⌫ / ↵（Lato 字库不含 LV_SYMBOL_*）
+# 其余 Montserrat 字号不开；即使 sdkconfig 里残留 =y，未被引用的字库
+# 也会被链接器 --gc-sections 丢掉，不占 Flash。
+CONFIG_LV_FONT_MONTSERRAT_16=y
+CONFIG_LV_FONT_MONTSERRAT_32=y
+CONFIG_LV_FONT_DEFAULT_MONTSERRAT_16=y
+
+# --- 控件 ---
+CONFIG_LV_USE_LABEL=y
+CONFIG_LV_USE_BTN=y
+CONFIG_LV_USE_BTNMATRIX=y
+CONFIG_LV_USE_FLEX=y
+CONFIG_LV_USE_GRID=y
+
+# =============================================================================
+# 应用层开关（见 main/Kconfig.projbuild）
+# =============================================================================
+# 板型：JC8048W550（默认，本机实测出图）/ CrowPanel 5.0
+# 选错 PCLK 的典型现象就是「背光亮、整屏黑」，见 main/bsp_pins.h 顶部说明
+CONFIG_ROLLCOATER_BOARD_JC8048W550=y
+# 触摸：GT911（默认）/ AXS15231
+CONFIG_ROLLCOATER_TOUCH_GT911=y
+# 无电机调试：默认开，接了步进驱动器再关掉
+# CONFIG_ROLLCOATER_MOTION_SIMULATE is not set
+#
+# 上电频率扫描自检（默认关闭）：打开后电机会按 6000/7500/8500/10000/12000/16000Hz
+# × 脉宽 5/20/50/自动 逐档跑，每段正反各 3200 步（±4mm 来回、净位移 0，全程约 1 分钟），
+# 用来一次看出这台机器的**可用频带**（从哪一档才开始转、哪一档开始抖）。
+# ★ 2026-09-22 深夜现场实测：当前拨码（1600 脉冲/圈）下 **8500Hz 以下一步都不走**；
+#   而 stepper_motor 例程的上电固定段（8500Hz 连跑 10s）能连续转 ⇒ 出厂速度就取
+#   8500Hz（= 10.625mm/s），运动曲线也整体抬到 8500Hz 以上（见 app_motion.h）。
+#   低频档不转是正常的，所以默认关掉，免得每次上电电机都白摆一分钟。
+# 需要复查/换机器时，把下面这行改成 CONFIG_ROLLCOATER_MOTION_SELFTEST=y，
+# 判读表见 main/README.md 9.7（第 2 步）与 9.12。
+# CONFIG_ROLLCOATER_MOTION_SELFTEST is not set
+
+# ---- 串口调试命令行（mtest / f / run / stop / mode）★ **交付时保持关闭** ----
+# 打开后会多出一条"**直接发脉冲**"的路径（真走轴、不经过界面状态机/限位），
+# 以及 `run` 这种"单向连续、不设长度上限"的命令 —— 全部属于调试功能，
+# 交付件里不应该存在。现场排障/换机器时临时打开：
+#   CONFIG_ROLLCOATER_MOTION_CONSOLE=y
+# 用法与判读表：main/README.md 9.11（换挡试转）与 9.11.1（f / run / stop）。
+#
+# ★ 2026-09-22 深夜：现场明确要求**保持关闭**（不做串口 A/B），
+#   改用"把 `run` 的发射方式移植进界面运动路径"来对齐（见 README 9.12.7.2）。
+# CONFIG_ROLLCOATER_MOTION_CONSOLE is not set
+
+# 每毫米脉冲数（步数/mm）= 驱动器脉冲/圈 ÷ 丝杠导程。**位置与速度全靠它换算**。
+#   厂商拨码口径 1600 脉冲/圈（SW1..3 = OFF ON OFF）：
+#        导程 2mm -> 800   ← 与本工程默认自洽，不用改
+#        导程 4mm -> 400   ← ★ 这时必须把下面这行改成 400
+#        （1600 脉冲/圈 + 4mm 导程却按 800 发脉冲 = 只走一半、且按两倍速度发
+#          脉冲；配合厂商要的 0.5A 就直接堵转 = "只嗡嗡不转"）
+#   量法：打开 SELFTEST，每档固定 200 步，实测位移 d(mm) -> 真实值 = 200 / d
+#        （d=0.25 -> 800；d=0.5 -> 400）。详见 main/README.md 9.5 / 9.2.1。
+CONFIG_ROLLCOATER_STEPS_PER_UNIT=800
+
+# 上电 DIR/ENA「三线自检」（默认关闭）：只动 IO12/IO13、**不发脉冲（轴不会走）**，
+# 每 2s 交替翻转并打印设值/读回；判 ENA 的决定性判据是**手扶轴**
+#（打印【使能】应变硬、打印【脱机】应能自由盘动）。判读表见 main/README.md 9.8。
+# CONFIG_ROLLCOATER_MOTION_WIRE_TEST is not set
+
+# STEP 高电平脉宽（µs，0 = 50% 方波）。**只影响高电平占多久，频率不变。**
+#   0    = ★ v9 默认：50% 方波 —— 现场验证过能连续转的
+#          `examples/peripherals/rmt/stepper_motor` 用的就是这个波形
+#   5    = v8 及以前的默认（与另一条"参考波形"对齐，TB6600 PUL 最小 2.5µs）
+#   50   = 慢光耦/丢步时往上试
+# ★ 若频率已落在 8500Hz 那一带却仍只嗡嗡不转，本项是第一嫌疑：见 main/README.md 9.12.5。
+CONFIG_ROLLCOATER_STEP_PULSE_US=0
+
+# ---- 使能稳定时间：ENA 拉低 → 发第一个脉冲之间等多久 ----
+# 「起转那一下发顿/滑步」十有八九是驱动器还没醒（光耦导通 + 输出级使能 + 保持力矩建立）
+# 就开始发脉冲，那几个脉冲驱动器不会计。v10 起默认 20 → 100ms（每次运动多等 80ms）。
+# 仍发顿就往上试 200 / 300。
+CONFIG_ROLLCOATER_ENA_SETTLE_MS=100
+
+# ---- 软启动起步频率（曲线/固定段起步要不要"从低频爬上来"）----
+# ★★ 现场实测结论（v9）：保持关闭 —— **12000Hz 直接起跳就能正常转**（用户原话"f 12000
+#   直接就能起来"）。而低频爬升会把轴拖过它**带不动的频段** ⇒ "卡壳、左右抖动，然后才转"。
+#   0 = 关闭（直接从巡航频率起跳）✓ 默认；想柔一点可试 9000/10000（越接近巡航频率越短）。
+# ★ 不用重编就能试：串口里 `mtest ss <hz>`，然后 `mtest move 10` 看起转。
+CONFIG_ROLLCOATER_SOFT_START_HZ=0
+
+# ---- 上电固定段（★ 调试开关，v12 起**默认关闭**）----
+# 打开后上电会（在 UI 建屏之前）跑「使能 → DIR → 等 100ms → 8500Hz 连发 10 秒 → 停 + 脱机」，
+# 绕开状态机/曲线/UI，用来分层判因（"硬件认不认脉冲" vs "流程对不对"）。
+# ★ 为什么默认关：① 上电会让轴单向走 ≈106mm（8500Hz×10s ÷ 800 步/mm）；
+#                  ② 这 10 秒界面不响应（在 UI 建屏之前跑）。
+# ★ 平时要它：串口里 `mtest hold [hz] [ms]`（默认 8500Hz × 10000ms）= 同一个功能，按需触发。
+# 排障/换机器时再打开下面这行。
+# CONFIG_ROLLCOATER_BOOT_HOLD is not set
+# CONFIG_ROLLCOATER_BOOT_HOLD_HZ=12000
+# CONFIG_ROLLCOATER_BOOT_HOLD_MS=10000

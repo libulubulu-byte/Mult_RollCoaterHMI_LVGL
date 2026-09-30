@@ -1,0 +1,201 @@
+Command: C:\Users\DELL\.espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe D:\ESP32-IDF\esp-idf-v5.5.1\tools/idf_monitor.py -p COM6 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 --revision 0 D:\ESP32-IDF\esp-idf-v5.5.1\examples\get-started\Mult_RollCoaterHMI\build\roll_coater_hmi.elf D:\ESP32-IDF\esp-idf-v5.5.1\examples\get-started\Mult_RollCoaterHMI\build\bootloader\bootloader.elf --force-color -m 'C:\Users\DELL\.espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe' 'D:\ESP32-IDF\esp-idf-v5.5.1\tools\idf.py' '-p' 'COM6'
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x1 (POWERON),boot:0x8 (SPI_FAST_FLASH_BOOT)
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce2820,len:0x1700
+load:0x403c8700,len:0xec0
+load:0x403cb700,len:0x31c0
+entry 0x403c894c
+[0;32mI (25) boot: ESP-IDF v5.5.1-dirty 2nd stage bootloader[0m
+[0;32mI (25) boot: compile time Sep 20 2026 23:58:36[0m
+[0;32mI (25) boot: Multicore bootloader[0m
+[0;32mI (26) boot: chip revision: v0.2[0m
+[0;32mI (28) boot: efuse block revision: v1.4[0m
+[0;32mI (32) qio_mode: Enabling default flash chip QIO[0m
+[0;32mI (36) boot.esp32s3: Boot SPI Speed : 80MHz[0m
+[0;32mI (40) boot.esp32s3: SPI Mode       : QIO[0m
+[0;32mI (44) boot.esp32s3: SPI Flash Size : 8MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (52) boot: Partition Table:[0m
+[0;32mI (55) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (61) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (68) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (74) boot:  2 factory          factory app      00 00 00010000 00400000[0m
+[0;32mI (81) boot: End of partition table[0m
+[0;32mI (84) esp_image: segment 0: paddr=00010020 vaddr=3c0d0020 size=4cec0h (315072) map[0m
+[0;32mI (138) esp_image: segment 1: paddr=0005cee8 vaddr=3fc9f700 size=03130h ( 12592) load[0m
+[0;32mI (141) esp_image: segment 2: paddr=00060020 vaddr=42000020 size=ce348h (844616) map[0m
+[0;32mI (267) esp_image: segment 3: paddr=0012e370 vaddr=3fca2830 size=02108h (  8456) load[0m
+[0;32mI (269) esp_image: segment 4: paddr=00130480 vaddr=40378000 size=17640h ( 95808) load[0m
+[0;32mI (289) esp_image: segment 5: paddr=00147ac8 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (299) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (299) boot: Disabling RNG early entropy source...[0m
+[0;32mI (309) octal_psram: vendor id    : 0x0d (AP)[0m
+[0;32mI (309) octal_psram: dev id       : 0x02 (generation 3)[0m
+[0;32mI (309) octal_psram: density      : 0x03 (64 Mbit)[0m
+[0;32mI (311) octal_psram: good-die     : 0x01 (Pass)[0m
+[0;32mI (315) octal_psram: Latency      : 0x01 (Fixed)[0m
+[0;32mI (320) octal_psram: VCC          : 0x01 (3V)[0m
+[0;32mI (324) octal_psram: SRF          : 0x01 (Fast Refresh)[0m
+[0;32mI (329) octal_psram: BurstType    : 0x01 (Hybrid Wrap)[0m
+[0;32mI (334) octal_psram: BurstLen     : 0x01 (32 Byte)[0m
+[0;32mI (338) octal_psram: Readlatency  : 0x02 (10 cycles@Fixed)[0m
+[0;32mI (343) octal_psram: DriveStrength: 0x00 (1/1)[0m
+[0;32mI (348) MSPI Timing: PSRAM timing tuning index: 5[0m
+[0;32mI (352) esp_psram: Found 8MB PSRAM device[0m
+[0;32mI (356) esp_psram: Speed: 80MHz[0m
+[0;32mI (359) cpu_start: Multicore app[0m
+[0;32mI (373) cpu_start: Pro cpu start user code[0m
+[0;32mI (373) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (373) app_init: Application information:[0m
+[0;32mI (373) app_init: Project name:     roll_coater_hmi[0m
+[0;32mI (378) app_init: App version:      676dc691-dirty[0m
+[0;32mI (383) app_init: Compile time:     Sep 22 2026 16:15:56[0m
+[0;32mI (388) app_init: ELF file SHA256:  069098e0b...[0m
+[0;32mI (392) app_init: ESP-IDF:          v5.5.1-dirty[0m
+[0;32mI (396) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (400) efuse_init: Max chip rev:     v0.99 [0m
+[0;32mI (404) efuse_init: Chip rev:         v0.2[0m
+[0;32mI (408) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (414) heap_init: At 3FCAC890 len 0003CE80 (243 KiB): RAM[0m
+[0;32mI (419) heap_init: At 3FCE9710 len 00005724 (21 KiB): RAM[0m
+[0;32mI (425) heap_init: At 600FE000 len 00001FE8 (7 KiB): RTCRAM[0m
+[0;32mI (430) esp_psram: Adding pool of 8192K of PSRAM memory to heap allocator[0m
+[0;32mI (437) spi_flash: detected chip: boya[0m
+[0;32mI (440) spi_flash: flash io: qio[0m
+[0;33mW (443) spi_flash: Detected size(16384k) larger than the size in the binary image header(8192k). Using the size in the binary image header.[0m
+[0;32mI (455) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (461) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (468) main_task: Started on CPU0[0m
+[0;32mI (480) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (480) main_task: Calling app_main()[0m
+[0;32mI (482) roll_coater: =================================================[0m
+[0;32mI (488) roll_coater:  Roll Coater HMI  (ESP-IDF v5.5.1-dirty, LVGL 8.3.11)[0m
+[0;32mI (495) roll_coater:  Reset reason: POWERON (正常上电)[0m
+[0;32mI (500) roll_coater:  Board   : JC8048W550 / ESP32-8048S050 (PCLK=GPIO42)[0m
+[0;32mI (507) roll_coater:  Panel   : 800x480 RGB565 parallel, BL=GPIO2[0m
+[0;32mI (512) roll_coater:  Touch   : GT911 @ I2C0 SDA=19 SCL=20[0m
+[0;32mI (518) roll_coater:  Motion  : STEP=11 DIR=12 ENA=13 ALARM=-1 (REAL)[0m
+[0;32mI (524) roll_coater: =================================================[0m
+[0;32mI (542) app_config: Config loaded: upper=50.000 lower=0.000 accel=150.000 decel=150.000 speed=15.000 pos=40.000 backlash=0.200[0m
+[0;32mI (543) bsp_display: Backlight ON (100%, LEDC PWM 1220Hz)[0m
+[0;32mI (578) bsp_display: Init RGB panel 800x480 @ 18MHz, PCLK=GPIO42, BL=GPIO2[0m
+[0;32mI (612) bsp_display: RGB panel ready (num_fbs=2, bounce=32000 px = 64000 B x2 in internal DMA RAM)[0m
+[0;32mI (612) bsp_display: Panel scan 43.9 Hz (PCLK 18MHz / 410000 px per frame)[0m
+[0;32mI (697) bsp_display: Both frame buffers pre-filled with 0xFFFF[0m
+[0;32mI (698) LVGL: Starting LVGL task[0m
+[0;33mW (698) bsp_display: Display mode: avoid-tearing + bounce | LVGL 800x480 x2 = PSRAM frames[0m
+[0;32mI (702) bsp_display: Internal RAM before display: free 106743, largest 61440[0m
+[0;32mI (712) bsp_display: LVGL display registered[0m
+[0;32mI (713) bsp_display: LVGL refresh auto-set: 34 ms (29.4 Hz) vs panel 43.9 Hz[0m
+[0;32mI (721) bsp_display: Touch I2C: SDA=19 SCL=20 @100000Hz[0m
+[0;32mI (725) bsp_display: GT911 found at 0x5D[0m
+[0;32mI (729) GT911: I2C address initialization procedure skipped - using default GT9xx setup[0m
+[0;32mI (757) GT911: TouchPad_ID:0x39,0x31,0x31[0m
+[0;32mI (757) GT911: TouchPad_Config_Version:67[0m
+[0;32mI (757) bsp_display: Touch input registered[0m
+[0;32mI (758) bsp_display: Backlight ON (100%, LEDC PWM 1220Hz)[0m
+[0;32mI (763) bsp_display: Display ready: 800x480, LVGL 8.3.11[0m
+[0;32mI (768) app_motion: GPIO drive: DIR/STEP = 默认 CAP_2(与 stepper_motor 台架一致)，ENA(IO13) = CAP_3(≈40mA，本工程原值)[0m
+[0;33mW (779) app_motion: ALARM input DISABLED (MOTION_GPIO_ALARM = -1): no alarm source wired[0m
+[0;33mW (787) app_motion: ★ STEP(IO11) 由 **LEDC 硬件 PWM** 产生（TIMER_2 / CH2，10bit）：实际 11998 Hz（请求工作点 12000 Hz）—— **没有事务/队列/边界，脉冲串中间不可能断**[0m
+[0;32mI (805) app_motion: Motion ready (REAL): 800 steps/unit, speed 15.000 mm/s (= 12000 steps/s), accel 150.0 / decel 150.0 mm/s²[0m
+[0;32mI (817) app_motion:   可用频带 8500 ~ 20000 Hz（= 10.625 ~ 25.000 mm/s）；工作点 12000 Hz（= 15.000 mm/s，串口 `run` 已验证），8500Hz 仅作收尾下限[0m
+[0;32mI (831) app_motion: 提示：定位表见 main/README.md 9.7；TB6600 拨码/电流/步数每毫米见 9.2.1 与 9.5；DIR/ENA 三线自检见 9.8[0m
+[0;32mI (845) app_state: State machine init: limits 0.000 .. 50.000, pos 40.000[0m
+[0;32mI (852) app_settings: Prefs loaded: brightness=70% unit=F auto_off=off(15s) light=off/80%[0m
+[0;32mI (859) app_light: Light on GPIO10 (HIGH active), LEDC 1000Hz 10bit -> OFF at 80%[0m
+[0;32mI (866) app_sensor: Sensor task started: SHT3x @0x44 on I2C0, every 2000ms, history every 300s (288 points)[0m
+[0;33mW (866) app_sensor: SHT3x not answering on 0x44 (I2C0 SDA=19 SCL=20). ENVIRONMENT/HISTORY will show "--" until it appears[0m
+[0;32mI (887) pp: pp rom version: e7ae62f[0m
+[0;32mI (890) net80211: net80211 rom version: e7ae62f[0m
+[0;32mI (895) wifi:wifi driver task: 3fce2788, prio:23, stack:6656, core=0[0m
+[0;32mI (903) wifi:wifi firmware version: 14da9b7[0m
+[0;32mI (904) wifi:wifi certification version: v7.0[0m
+[0;32mI (908) wifi:config NVS flash: enabled[0m
+[0;32mI (911) wifi:config nano formatting: disabled[0m
+[0;32mI (915) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (920) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (924) wifi:Init management short buffer num: 32[0m
+[0;32mI (929) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (933) wifi:Init static tx FG buffer num: 2[0m
+[0;32mI (937) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (941) wifi:Init static rx buffer num: 10[0m
+[0;32mI (944) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (949) wifi_init: rx ba win: 6[0m
+[0;32mI (951) wifi_init: accept mbox: 6[0m
+[0;32mI (954) wifi_init: tcpip mbox: 32[0m
+[0;32mI (957) wifi_init: udp mbox: 6[0m
+[0;32mI (960) wifi_init: tcp mbox: 6[0m
+[0;32mI (963) wifi_init: tcp tx win: 5760[0m
+[0;32mI (966) wifi_init: tcp rx win: 5760[0m
+[0;32mI (969) wifi_init: tcp mss: 1440[0m
+[0;32mI (972) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (976) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (980) phy_init: phy_version 701,f4f1da3a,Mar  3 2025,15:50:10[0m
+[0;32mI (1024) wifi:mode : sta (ac:27:6e:a4:a1:b8)[0m
+[0;32mI (1025) wifi:enable tsf[0m
+[0;32mI (1026) app_wifi: No saved network: open SETTINGS -> WiFi -> Configure to provision[0m
+[0;32mI (1027) roll_coater: Backlight brightness restored to 70% (auto screen off: off, 15s)[0m
+[0;32mI (1035) ui_theme: Theme ready (page #EEEEEE, key #E0E0E0, green #2E7D32, stop #D32F2F, bold=Lato Bold fonts)[0m
+[0;32mI (1073) ui_menu: Main menu created: 5 cards (row1 3x 246x170, row2 2x 375x167), MOTOR TEST -> ui_main[0m
+[0;32mI (1104) ui_main: Motor test screen created: card(15,63,362x138) keypad(400,104) key 120x64 stop(400,400,384x56)[0m
+[0;32mI (1138) ui_admin: Admin screen created: 7 rows, row height 56[0m
+[0;32mI (1150) ui_light: LIGHT page created: bulb 132x132, switch d=150, slider 252..624[0m
+[0;32mI (1166) ui_env: ENVIRONMENT page created: gauges r=86 cx=210/590, temp range 0..40C[0m
+[0;32mI (1192) ui_history: HISTORY page created: plot 676x170, up to 288 points per curve[0m
+[0;32mI (1218) ui_settings: SETTINGS page created: 5 rows (y=74..456, row 764x70)[0m
+[0;32mI (1341) ui_wifi: WiFi pages created: list + password (keyboard 5 rows)[0m
+[0;32mI (1342) ui_menu: Main menu shown (swipe right->left on MOTOR TEST goes back here)[0m
+[0;32mI (1345) roll_coater: System ready. Tap MOTOR TEST on MAIN MENU. Enter Roll Coat Height[0m
+[0;32mI (1439) roll_coater: Back from sub-pages: top-left button or swipe right->left[0m
+[0;32mI (1441) roll_coater: Admin: type 9.999 then hold Enter for 3000 ms[0m
+[0;32mI (1447) main_task: Returned from app_main()[0m
+[0;32mI (2664) ui_menu: MOTOR TEST tapped -> motor test screen[0m
+[0;32mI (6637) app_state: Submit 0.000 in State 1 (limits 0.000 .. 50.000) OK[0m
+[0;32mI (6638) app_motion: Current position set to 0.000 mm[0m
+[0;32mI (6638) app_motion: Driver ENABLED (ENA=GPIO13, level=0)[0m
+[0;32mI (6643) app_state: State -> State 2[0m
+[0;32mI (6649) app_config: Config committed to NVS (ESP_OK)[0m
+[0;32mI (9886) app_state: Submit 40.000 in State 2 (limits 0.000 .. 50.000) OK[0m
+[0;32mI (9986) app_motion: Move: 0.000 -> 40.000 mm (32000 steps, backlash 0, 12000 steps/s = 15.0 mm/s)[0m
+[0;32mI (9986) app_motion:   曲线：起步 12000 Hz → 巡航 12000 Hz → 收尾 12000 Hz —— **恒定频率**（无爬升、无减速段：与串口 `run` 同构，第一拍就是它、最后一拍还是它）[0m
+[0;32mI (10003) app_motion:   STEP=IO11 DIR=IO12(设 1 / 读回 1) ENA=IO13(0, 0=使能) 脉冲上限 88 步/事务[0m
+[0;33mW (10012) app_motion:   STEP：LEDC 硬件 PWM **11998 Hz**（实际）× 32000 个脉冲 ≈ 2.667 s —— 整段由硬件产生：**中间没有事务边界、不可能断**[0m
+[0;32mI (12680) app_motion:   脉冲由 LEDC 硬件 PWM 产生：11998 Hz × 2.667 s ≈ 32000 个脉冲（**没有事务边界 ⇒ 脉冲串中间不可能断**）[0m
+[0;32mI (12683) app_motion: Arrived at 40.000 mm (32000 steps)[0m
+[0;32mI (12697) app_config: Config committed to NVS (ESP_OK)[0m
+[0;32mI (20144) app_state: Submit 0.001 in State 2 (limits 0.000 .. 50.000) OK[0m
+[0;32mI (20145) app_motion: Direction reversed, pre-run backlash 160 steps (logic position unchanged)[0m
+[0;32mI (20249) app_motion: Move: 40.000 -> 0.001 mm (-32159 steps, backlash 160, 12000 steps/s = 15.0 mm/s)[0m
+[0;32mI (20250) app_motion:   曲线：起步 12000 Hz → 巡航 12000 Hz → 收尾 12000 Hz —— **恒定频率**（无爬升、无减速段：与串口 `run` 同构，第一拍就是它、最后一拍还是它）[0m
+[0;32mI (20266) app_motion:   STEP=IO11 DIR=IO12(设 0 / 读回 0) ENA=IO13(0, 0=使能) 脉冲上限 88 步/事务[0m
+[0;33mW (20276) app_motion:   STEP：LEDC 硬件 PWM **11998 Hz**（实际）× 32159 个脉冲 ≈ 2.680 s —— 整段由硬件产生：**中间没有事务边界、不可能断**[0m
+[0;32mI (22957) app_motion:   脉冲由 LEDC 硬件 PWM 产生：11998 Hz × 2.681 s ≈ 32159 个脉冲（**没有事务边界 ⇒ 脉冲串中间不可能断**）[0m
+[0;32mI (22960) app_motion: Arrived at 0.001 mm (-32159 steps)[0m
+[0;32mI (22975) app_config: Config committed to NVS (ESP_OK)[0m
+[0;32mI (27612) app_state: Submit 40.000 in State 2 (limits 0.000 .. 50.000) OK[0m
+[0;32mI (27613) app_motion: Direction reversed, pre-run backlash 160 steps (logic position unchanged)[0m
+[0;32mI (27716) app_motion: Move: 0.001 -> 40.000 mm (32159 steps, backlash 160, 12000 steps/s = 15.0 mm/s)[0m
+[0;32mI (27716) app_motion:   曲线：起步 12000 Hz → 巡航 12000 Hz → 收尾 12000 Hz —— **恒定频率**（无爬升、无减速段：与串口 `run` 同构，第一拍就是它、最后一拍还是它）[0m
+[0;32mI (27733) app_motion:   STEP=IO11 DIR=IO12(设 1 / 读回 1) ENA=IO13(0, 0=使能) 脉冲上限 88 步/事务[0m
+[0;33mW (27742) app_motion:   STEP：LEDC 硬件 PWM **11998 Hz**（实际）× 32159 个脉冲 ≈ 2.680 s —— 整段由硬件产生：**中间没有事务边界、不可能断**[0m
+[0;32mI (30424) app_motion:   脉冲由 LEDC 硬件 PWM 产生：11998 Hz × 2.681 s ≈ 32159 个脉冲（**没有事务边界 ⇒ 脉冲串中间不可能断**）[0m
+[0;32mI (30427) app_motion: Arrived at 40.000 mm (32159 steps)[0m
+[0;32mI (30442) app_config: Config committed to NVS (ESP_OK)[0m
+[0;33mW (64302) app_motion: STOP pressed, motion halted at 40.000 mm[0m
+[0;33mW (64303) ui_main: STOP pressed in State 2: entry was '0.000' (len=0) -> cleared[0m
+[0;33mW (68202) app_motion: STOP pressed, motion halted at 40.000 mm[0m
+[0;33mW (68203) ui_main: STOP pressed in State 2: entry was '0.000' (len=0) -> cleared[0m
+[0;33mW (68683) app_motion: STOP pressed, motion halted at 40.000 mm[0m
+[0;33mW (68684) ui_main: STOP pressed in State 2: entry was '0.000' (len=0) -> cleared[0m
+[0;33mW (73107) app_motion: STOP pressed, motion halted at 40.000 mm[0m
+[0;33mW (73108) ui_main: STOP pressed in State 2: entry was '0.000' (len=0) -> cleared[0m
+[0;33mW (74539) app_motion: STOP pressed, motion halted at 40.000 mm[0m
+[0;33mW (74540) ui_main: STOP pressed in State 2: entry was '0.000' (len=0) -> cleared[0m
+[0;33mW (74692) app_motion: STOP pressed, motion halted at 40.000 mm[0m
+[0;33mW (74693) ui_main: STOP pressed in State 2: entry was '0.000' (len=0) -> cleared[0m
+[0;33mW (132394) app_motion: STOP pressed, motion halted at 40.000 mm[0m
+[0;33mW (132395) ui_main: STOP pressed in State 2: entry was '0.000' (len=0) -> cleared[0m

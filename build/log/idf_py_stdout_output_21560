@@ -1,0 +1,14 @@
+Command: ninja flash
+[0/1] Re-running CMake...
+-- Minimal build - OFF
+-- ccache will be used for faster recompilation
+-- Building ESP-IDF components for target esp32s3
+NOTICE: Processing 5 dependencies:
+NOTICE: [1/5] espressif/esp_lcd_touch (1.2.1)
+NOTICE: [2/5] espressif/esp_lcd_touch_gt911 (1.2.1)
+NOTICE: [3/5] espressif/esp_lvgl_port (2.9.0)
+NOTICE: [4/5] lvgl/lvgl (8.3.11)
+NOTICE: [5/5] idf (5.5.1)
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja 
+C:\Users\DELL\.espressif\tools\cmake\3.30.2\bin\cmake.exe --regenerate-during-build -SD:\ESP32-IDF\esp-idf-v5.5.1\examples\get-started\Mult_RollCoaterHMI -BD:\ESP32-IDF\esp-idf-v5.5.1\examples\get-started\Mult_RollCoaterHMI\build

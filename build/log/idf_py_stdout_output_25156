@@ -1,0 +1,563 @@
+Command: ninja flash
+[1/14] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\ESP32-IDF\esp-idf-v5.5.1\examples\get-started\Mult_RollCoaterHMI\build\bootloader\esp-idf\esptool_py && C:\Users\DELL\.espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe D:/ESP32-IDF/esp-idf-v5.5.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/build/bootloader/bootloader.bin"
+Bootloader binary size 0x57e0 bytes. 0x2820 bytes (31%) free.
+[2/14] No install step for 'bootloader'
+[3/14] Completed 'bootloader'
+[4/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_config.c.obj
+FAILED: esp-idf/main/CMakeFiles/__idf_main.dir/app_config.c.obj 
+ccache C:\Users\DELL\.espressif\tools\xtensa-esp-elf\esp-14.2.0_20241119\xtensa-esp-elf\bin\xtensa-esp32s3-elf-gcc.exe -DESP_PLATFORM -DIDF_VER=\"v5.5.1-dirty\" -DLV_CONF_INCLUDE_SIMPLE -DSOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE -DSOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ -D_GLIBCXX_HAVE_POSIX_SEMAPHORE -D_GLIBCXX_USE_POSIX_SEMAPHORE -D_GNU_SOURCE -D_POSIX_READER_WRITER_LOCKS -ID:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/build/config -ID:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main -ID:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/fonts -ID:/ESP32-IDF/esp-idf-v5.5.1/components/newlib/platform_include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/freertos/config/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/freertos/config/include/freertos -ID:/ESP32-IDF/esp-idf-v5.5.1/components/freertos/config/xtensa/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/freertos/FreeRTOS-Kernel/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos -ID:/ESP32-IDF/esp-idf-v5.5.1/components/freertos/esp_additions/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_hw_support/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_hw_support/include/soc -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_hw_support/include/soc/esp32s3 -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_hw_support/dma/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_hw_support/ldo/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_hw_support/debug_probe/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_hw_support/mspi_timing_tuning/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_hw_support/mspi_timing_tuning/tuning_scheme_impl/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_hw_support/power_supply/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_hw_support/port/esp32s3/. -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_hw_support/port/esp32s3/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/. -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_hw_support/mspi_timing_tuning/port/esp32s3/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/heap/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/heap/tlsf -ID:/ESP32-IDF/esp-idf-v5.5.1/components/log/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/soc/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/soc/esp32s3 -ID:/ESP32-IDF/esp-idf-v5.5.1/components/soc/esp32s3/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/soc/esp32s3/register -ID:/ESP32-IDF/esp-idf-v5.5.1/components/hal/platform_port/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/hal/esp32s3/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/hal/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_rom/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_rom/esp32s3/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_rom/esp32s3/include/esp32s3 -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_rom/esp32s3 -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_common/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_system/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_system/port/soc -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_system/port/include/private -ID:/ESP32-IDF/esp-idf-v5.5.1/components/xtensa/esp32s3/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/xtensa/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/xtensa/deprecated_include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/lwip/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/lwip/include/apps -ID:/ESP32-IDF/esp-idf-v5.5.1/components/lwip/include/apps/sntp -ID:/ESP32-IDF/esp-idf-v5.5.1/components/lwip/lwip/src/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/lwip/port/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/lwip/port/freertos/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/lwip/port/esp32xx/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/lwip/port/esp32xx/include/arch -ID:/ESP32-IDF/esp-idf-v5.5.1/components/lwip/port/esp32xx/include/sys -ID:/ESP32-IDF/esp-idf-v5.5.1/components/driver/deprecated -ID:/ESP32-IDF/esp-idf-v5.5.1/components/driver/i2c/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/driver/touch_sensor/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/driver/twai/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/driver/touch_sensor/esp32s3/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_pm/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_ringbuf/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_gpio/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_pcnt/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_gptimer/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_spi/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_mcpwm/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_ana_cmpr/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_i2s/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_sdmmc/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/sdmmc/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_sdspi/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_sdio/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_dac/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_rmt/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_tsens/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_sdm/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_i2c/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_uart/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/vfs/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_ledc/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_parlio/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_usb_serial_jtag/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_driver_twai/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_lcd/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_lcd/interface -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_lcd/rgb/include -ID:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/managed_components/espressif__esp_lvgl_port/include -ID:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/managed_components/lvgl__lvgl -ID:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/managed_components/lvgl__lvgl/src -ID:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/managed_components -ID:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/managed_components/lvgl__lvgl/examples -ID:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/managed_components/lvgl__lvgl/demos -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_timer/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/nvs_flash/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_partition/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_wifi/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_wifi/include/local -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_wifi/wifi_apps/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_wifi/wifi_apps/nan_app/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_event/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_phy/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_phy/esp32s3/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_netif/include -ID:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/managed_components/espressif__esp_lcd_touch_gt911/include -ID:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/managed_components/espressif__esp_lcd_touch/include -ID:/ESP32-IDF/esp-idf-v5.5.1/components/console -ID:/ESP32-IDF/esp-idf-v5.5.1/components/esp_vfs_console/include -mlongcalls  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -fdiagnostics-color=always -ffunction-sections -fdata-sections -Wall -Werror=all -Wno-error=unused-function -Wno-error=unused-variable -Wno-error=unused-but-set-variable -Wno-error=deprecated-declarations -Wextra -Wno-error=extra -Wno-unused-parameter -Wno-sign-compare -Wno-enum-conversion -gdwarf-4 -ggdb -mdisable-hardware-atomics -O2 -fmacro-prefix-map=D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI=. -fmacro-prefix-map=D:/ESP32-IDF/esp-idf-v5.5.1=/IDF -fstrict-volatile-bitfields -fno-jump-tables -fno-tree-switch-conversion -std=gnu17 -Wno-old-style-declaration -MD -MT esp-idf/main/CMakeFiles/__idf_main.dir/app_config.c.obj -MF esp-idf\main\CMakeFiles\__idf_main.dir\app_config.c.obj.d -o esp-idf/main/CMakeFiles/__idf_main.dir/app_config.c.obj -c D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:55:23: error: "/*" within comment [-Werror=comment]
+   55 |  *   ★ 换电机/换驱动器/**改细分拨码**/改供电后，必须重新扫一次频（或用 `mtest`），
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:55:72: error: stray '`' in program
+   55 |  *   ★ 换电机/换驱动器/**改细分拨码**/改供电后，必须重新扫一次频（或用 `mtest`），
+      |                                                                        ^
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:55:39: error: unknown type name '\U00006539\U00004f9b\U00007535\U0000540e\U0000ff0c\U00005fc5\U0000987b\U000091cd\U000065b0\U0000626b\U00004e00\U00006b21\U00009891\U0000ff08\U00006216\U00007528'
+   55 |  *   ★ 换电机/换驱动器/**改细分拨码**/改供电后，必须重新扫一次频（或用 `mtest`），
+      |                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:55:78: error: stray '`' in program
+   55 |  *   ★ 换电机/换驱动器/**改细分拨码**/改供电后，必须重新扫一次频（或用 `mtest`），
+      |                                                                              ^
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:55:79: error: expected '=', ',', ';', 'asm' or '__attribute__' before '\U0000ff09\U0000ff0c'
+   55 |  *   ★ 换电机/换驱动器/**改细分拨码**/改供电后，必须重新扫一次频（或用 `mtest`），
+      |                                                                               ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:55:79: error: unknown type name '\U0000ff09\U0000ff0c'
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:56:56: error: stray '\343' in program
+   56 |  *     <U+518D><U+628A> MOTION_STEP_FREQ_MAX_HZ <U+4E0E><U+51FA><U+5382> speed <U+4E00><U+8D77><U+6539><U+3002>
+      |                                                                                                        ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:58:32: error: stray '\343' in program
+   58 |  * ---- <U+4EE5><U+4E0B><U+662F> v1~v5 <U+7684><U+6392><U+67E5><U+7559><U+6863><U+3002><U+5176><U+4E2D>"<U+9891><U+7387><U+4E0D><U+662F><U+74F6><U+9888>"<U+90A3><U+6761>**<U+5DF2><U+88AB> v6 <U+63A8><U+7FFB>**<U+FF1A>
+      |                                                                                ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:59:64: error: stray '\343' in program
+   59 |  *      <U+5B83><U+662F><U+5728>"<U+65E7><U+62E8><U+7801> + <U+65E0><U+52A0><U+51CF><U+901F><U+7684><U+626B><U+63CF><U+81EA><U+68C0>"<U+4E0B><U+5F97><U+5230><U+7684><U+FF0C><U+6761><U+4EF6><U+4E0D><U+6210><U+7ACB><U+3002>----
+      |                                                                                                                                                                                                                      ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:61:4: error: stray '\342' in program
+   61 |  * <U+2605> 2026-09-22 <U+73B0><U+573A>"<U+7535><U+673A><U+53EA><U+9707><U+52A8><U+4E0D><U+8F6C><U+5708>"<U+7684><U+9636><U+6BB5><U+6027><U+7ED3><U+8BBA><U+FF08><U+8FC7><U+7A0B><U+89C1> main/README.md 9.7<U+FF09><U+FF1A>
+      |    ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:61:11: error: invalid digit "9" in octal constant
+   61 |  * ★ 2026-09-22 现场"电机只震动不转圈"的阶段性结论（过程见 main/README.md 9.7）：
+      |           ^~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:61:75: error: invalid suffix "）：" on floating constant
+   61 |  * ★ 2026-09-22 现场"电机只震动不转圈"的阶段性结论（过程见 main/README.md 9.7）：
+      |                                                                           ^~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:63:46: error: invalid suffix "V" on integer constant
+   63 |  *   硬件：4 线两相步进（42BL233）+ TB6600 + 22V。**频率不是瓶颈** ——
+      |                                              ^~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:63:49: error: stray '\343' in program
+   63 |  *   <U+786C><U+4EF6><U+FF1A>4 <U+7EBF><U+4E24><U+76F8><U+6B65><U+8FDB><U+FF08>42BL233<U+FF09>+ TB6600 + 22V<U+3002>**<U+9891><U+7387><U+4E0D><U+662F><U+74F6><U+9888>** <U+2014><U+2014>
+      |                                                                                                             ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:63:68: error: stray '\342' in program
+   63 |  *   <U+786C><U+4EF6><U+FF1A>4 <U+7EBF><U+4E24><U+76F8><U+6B65><U+8FDB><U+FF08>42BL233<U+FF09>+ TB6600 + 22V<U+3002>**<U+9891><U+7387><U+4E0D><U+662F><U+74F6><U+9888>** <U+2014><U+2014>
+      |                                                                                                                                                                          ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:63:69: error: stray '\342' in program
+   63 |  *   <U+786C><U+4EF6><U+FF1A>4 <U+7EBF><U+4E24><U+76F8><U+6B65><U+8FDB><U+FF08>42BL233<U+FF09>+ TB6600 + 22V<U+3002>**<U+9891><U+7387><U+4E0D><U+662F><U+74F6><U+9888>** <U+2014><U+2014>
+      |                                                                                                                                                                                  ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:64:39: error: invalid suffix "Hz" on integer constant
+   64 |  *   现场用本工程的频率扫描自检逐档跑 200Hz→16kHz，**每一档都正常转圈**
+      |                                       ^~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:64:44: error: stray '\342' in program
+   64 |  *   <U+73B0><U+573A><U+7528><U+672C><U+5DE5><U+7A0B><U+7684><U+9891><U+7387><U+626B><U+63CF><U+81EA><U+68C0><U+9010><U+6863><U+8DD1> 200Hz<U+2192>16kHz<U+FF0C>**<U+6BCF><U+4E00><U+6863><U+90FD><U+6B63><U+5E38><U+8F6C><U+5708>**
+      |                                                                                                                                            ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:64:45: error: invalid suffix "kHz，" on integer constant
+   64 |  *   现场用本工程的频率扫描自检逐档跑 200Hz→16kHz，**每一档都正常转圈**
+      |                                             ^~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:65:11: error: invalid suffix "kHz" on integer constant
+   65 |  *   （含 16kHz = 20mm/s），所以"频率太高"的假设被排除。
+      |           ^~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:65:19: error: invalid suffix "mm" on integer constant
+   65 |  *   （含 16kHz = 20mm/s），所以"频率太高"的假设被排除。
+      |                   ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:65:55: error: stray '\343' in program
+   65 |  *   <U+FF08><U+542B> 16kHz = 20mm/s<U+FF09><U+FF0C><U+6240><U+4EE5>"<U+9891><U+7387><U+592A><U+9AD8>"<U+7684><U+5047><U+8BBE><U+88AB><U+6392><U+9664><U+3002>
+      |                                                                                                                                                       ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:67:72: error: stray '\343' in program
+   67 |  *     <U+00B7> <U+4E00><U+4E2A> RMT <U+4E8B><U+52A1><U+4ECE>"1 <U+4E2A><U+7B26><U+53F7> + loop_count <U+5FAA><U+73AF>"<U+6539><U+6210>**<U+6446><U+6EE1> n <U+4E2A><U+7B26><U+53F7><U+3001><U+4E0D><U+5FAA><U+73AF>**<U+FF1B>
+      |                                                                                                                                                                                     ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:68:66: error: invalid suffix "µs）" on integer constant
+   68 |  *     · STEP/DIR/ENA 驱动能力拉满（脉宽最终与现场参考波形对齐在 5µs）。
+      |                                                                  ^~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:68:71: error: stray '\343' in program
+   68 |  *     <U+00B7> STEP/DIR/ENA <U+9A71><U+52A8><U+80FD><U+529B><U+62C9><U+6EE1><U+FF08><U+8109><U+5BBD><U+6700><U+7EC8><U+4E0E><U+73B0><U+573A><U+53C2><U+8003><U+6CE2><U+5F62><U+5BF9><U+9F50><U+5728> 5<U+00B5>s<U+FF09><U+3002>
+      |                                                                                                                                                                                                                         ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:69:76: error: stray '\343' in program
+   69 |  *   <U+8FD9><U+4E24><U+6761><U+4E00><U+8D77><U+6539><U+7684><U+FF0C><U+4E8B><U+540E><U+65E0><U+6CD5><U+5355><U+72EC><U+5F52><U+56E0><U+FF0C><U+4F46><U+90FD><U+662F><U+66F4><U+7A33><U+59A5><U+7684><U+65B9><U+5411><U+FF0C>**<U+4E0D><U+8981><U+518D><U+6539><U+56DE><U+53BB>**<U+3002>
+      |                                                                                                                                                                                                                                                                                  ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:71:22: error: invalid suffix "mm" on integer constant
+   71 |  *   参数取值：speed 20mm/s（= 16000 steps/s = 16kHz 脉冲，与现场"参考波形"的
+      |                      ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:71:48: error: invalid suffix "kHz" on integer constant
+   71 |  *   参数取值：speed 20mm/s（= 16000 steps/s = 16kHz 脉冲，与现场"参考波形"的
+      |                                                ^~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:72:6: error: invalid suffix "kHz" on floating constant
+   72 |  *   15.5kHz 对齐 —— 那版是 20mm/s，频率方面逐项一致）；accel/decel 60mm/s²
+      |      ^~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:72:19: error: stray '\342' in program
+   72 |  *   15.5kHz <U+5BF9><U+9F50> <U+2014><U+2014> <U+90A3><U+7248><U+662F> 20mm/s<U+FF0C><U+9891><U+7387><U+65B9><U+9762><U+9010><U+9879><U+4E00><U+81F4><U+FF09><U+FF1B>accel/decel 60mm/s<U+00B2>
+      |                               ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:72:20: error: stray '\342' in program
+   72 |  *   15.5kHz <U+5BF9><U+9F50> <U+2014><U+2014> <U+90A3><U+7248><U+662F> 20mm/s<U+FF0C><U+9891><U+7387><U+65B9><U+9762><U+9010><U+9879><U+4E00><U+81F4><U+FF09><U+FF1B>accel/decel 60mm/s<U+00B2>
+      |                                       ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:72:29: error: invalid suffix "mm" on integer constant
+   72 |  *   15.5kHz 对齐 —— 那版是 20mm/s，频率方面逐项一致）；accel/decel 60mm/s²
+      |                             ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:72:69: error: invalid suffix "mm" on integer constant
+   72 |  *   15.5kHz 对齐 —— 那版是 20mm/s，频率方面逐项一致）；accel/decel 60mm/s²
+      |                                                                     ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:73:9: error: invalid suffix "s" on floating constant
+   73 |  *   （0.33s 到满速，比最初的 150mm/s² 温和）。
+      |         ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:73:31: error: invalid suffix "mm" on integer constant
+   73 |  *   （0.33s 到满速，比最初的 150mm/s² 温和）。
+      |                               ^~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:73:46: error: stray '\343' in program
+   73 |  *   <U+FF08>0.33s <U+5230><U+6EE1><U+901F><U+FF0C><U+6BD4><U+6700><U+521D><U+7684> 150mm/s<U+00B2> <U+6E29><U+548C><U+FF09><U+3002>
+      |                                                                                                                             ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:74:6: error: stray '\342' in program
+   74 |  *   <U+2605> 20mm/s <U+662F><U+626B><U+9891><U+81EA><U+68C0><U+9A8C><U+8BC1><U+8FC7><U+7684><U+FF08>16kHz <U+90A3><U+4E00><U+6863><U+6B63><U+5E38><U+8F6C><U+5708><U+FF09><U+FF0C><U+8981><U+66F4><U+6162><U+5728> Admin <U+91CC><U+5F80><U+4E0B><U+8C03><U+FF1B>
+      |      ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:74:8: error: invalid suffix "mm" on integer constant
+   74 |  *   ★ 20mm/s 是扫频自检验证过的（16kHz 那一档正常转圈），要更慢在 Admin 里往下调；
+      |        ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:75:15: error: invalid suffix "mm" on integer constant
+   75 |  *     带载跑 20mm/s 若出现失步，先降到 10 或 5 再排查机械/电流。
+      |               ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:75:64: error: stray '\343' in program
+   75 |  *     <U+5E26><U+8F7D><U+8DD1> 20mm/s <U+82E5><U+51FA><U+73B0><U+5931><U+6B65><U+FF0C><U+5148><U+964D><U+5230> 10 <U+6216> 5 <U+518D><U+6392><U+67E5><U+673A><U+68B0>/<U+7535><U+6D41><U+3002>
+      |                                                                                                                                                                                        ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:77:4: error: stray '\342' in program
+   77 |  * <U+2605><U+2605> 2026-09-22 <U+665A> v5<U+FF1A>**<U+64A4><U+9500> v4 <U+7684>"<U+6309><U+5382><U+5546> 0.5A <U+964D><U+901F>"<U+FF0C><U+56DE><U+5230> 20mm/s** <U+2605><U+2605>
+      |    ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:77:5: error: stray '\342' in program
+   77 |  * <U+2605><U+2605> 2026-09-22 <U+665A> v5<U+FF1A>**<U+64A4><U+9500> v4 <U+7684>"<U+6309><U+5382><U+5546> 0.5A <U+964D><U+901F>"<U+FF0C><U+56DE><U+5230> 20mm/s** <U+2605><U+2605>
+      |            ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:77:12: error: invalid digit "9" in octal constant
+   77 |  * ★★ 2026-09-22 晚 v5：**撤销 v4 的"按厂商 0.5A 降速"，回到 20mm/s** ★★
+      |            ^~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:77:62: error: invalid suffix "mm" on integer constant
+   77 |  * ★★ 2026-09-22 晚 v5：**撤销 v4 的"按厂商 0.5A 降速"，回到 20mm/s** ★★
+      |                                                              ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:77:71: error: stray '\342' in program
+   77 |  * <U+2605><U+2605> 2026-09-22 <U+665A> v5<U+FF1A>**<U+64A4><U+9500> v4 <U+7684>"<U+6309><U+5382><U+5546> 0.5A <U+964D><U+901F>"<U+FF0C><U+56DE><U+5230> 20mm/s** <U+2605><U+2605>
+      |                                                                                                                                                                   ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:77:72: error: stray '\342' in program
+   77 |  * <U+2605><U+2605> 2026-09-22 <U+665A> v5<U+FF1A>**<U+64A4><U+9500> v4 <U+7684>"<U+6309><U+5382><U+5546> 0.5A <U+964D><U+901F>"<U+FF0C><U+56DE><U+5230> 20mm/s** <U+2605><U+2605>
+      |                                                                                                                                                                           ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:79:52: error: stray '\343' in program
+   79 |  *   <U+73B0><U+573A><U+6700><U+65B0><U+4E8B><U+5B9E><U+FF08><U+6700><U+6709><U+8BF4><U+670D><U+529B><U+7684><U+4E00><U+6761><U+FF09><U+FF1A>**<U+540C><U+4E00><U+53F0><U+673A><U+5668><U+3001><U+540C><U+4E00><U+5957><U+9A71><U+52A8><U+5668>+<U+7535><U+673A>+<U+63A5><U+7EBF><U+FF0C>
+      |                                                                                                                                                                                        ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:81:8: error: stray '\343' in program
+   81 |  *   **<U+300C><U+53EA><U+6709> SW2<U+3001>SW4 <U+662F> ON<U+300D>** = `SW1..SW3 = OFF ON OFF`<U+3001>`SW4..SW6 = ON OFF OFF`<U+3002>
+      |        ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:81:18: error: stray '\343' in program
+   81 |  *   **<U+300C><U+53EA><U+6709> SW2<U+3001>SW4 <U+662F> ON<U+300D>** = `SW1..SW3 = OFF ON OFF`<U+3001>`SW4..SW6 = ON OFF OFF`<U+3002>
+      |                                    ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:81:29: error: stray '\343' in program
+   81 |  *   **<U+300C><U+53EA><U+6709> SW2<U+3001>SW4 <U+662F> ON<U+300D>** = `SW1..SW3 = OFF ON OFF`<U+3001>`SW4..SW6 = ON OFF OFF`<U+3002>
+      |                                                           ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:81:36: error: stray '`' in program
+   81 |  *   **「只有 SW2、SW4 是 ON」** = `SW1..SW3 = OFF ON OFF`、`SW4..SW6 = ON OFF OFF`。
+      |                                    ^
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:81:58: error: stray '`' in program
+   81 |  *   **「只有 SW2、SW4 是 ON」** = `SW1..SW3 = OFF ON OFF`、`SW4..SW6 = ON OFF OFF`。
+      |                                                          ^
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:81:59: error: stray '\343' in program
+   81 |  *   **<U+300C><U+53EA><U+6709> SW2<U+3001>SW4 <U+662F> ON<U+300D>** = `SW1..SW3 = OFF ON OFF`<U+3001>`SW4..SW6 = ON OFF OFF`<U+3002>
+      |                                                                                               ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:81:61: error: stray '`' in program
+   81 |  *   **「只有 SW2、SW4 是 ON」** = `SW1..SW3 = OFF ON OFF`、`SW4..SW6 = ON OFF OFF`。
+      |                                                             ^
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:81:83: error: stray '`' in program
+   81 |  *   **「只有 SW2、SW4 是 ON」** = `SW1..SW3 = OFF ON OFF`、`SW4..SW6 = ON OFF OFF`。
+      |                                                                                   ^
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:81:84: error: stray '\343' in program
+   81 |  *   **<U+300C><U+53EA><U+6709> SW2<U+3001>SW4 <U+662F> ON<U+300D>** = `SW1..SW3 = OFF ON OFF`<U+3001>`SW4..SW6 = ON OFF OFF`<U+3002>
+      |                                                                                                                              ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:83:15: error: stray '`' in program
+   83 |  *     · 细分 `OFF ON OFF` ⇒ **1600 脉冲/圈**（8 细分）—— 与厂商文档一致 ✅；
+      |               ^
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:83:26: error: stray '`' in program
+   83 |  *     · 细分 `OFF ON OFF` ⇒ **1600 脉冲/圈**（8 细分）—— 与厂商文档一致 ✅；
+      |                          ^
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:83:28: error: stray '\342' in program
+   83 |  *     <U+00B7> <U+7EC6><U+5206> `OFF ON OFF` <U+21D2> **1600 <U+8109><U+51B2>/<U+5708>**<U+FF08>8 <U+7EC6><U+5206><U+FF09><U+2014><U+2014> <U+4E0E><U+5382><U+5546><U+6587><U+6863><U+4E00><U+81F4> <U+2705><U+FF1B>
+      |                                               ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:83:56: error: stray '\342' in program
+   83 |  *     <U+00B7> <U+7EC6><U+5206> `OFF ON OFF` <U+21D2> **1600 <U+8109><U+51B2>/<U+5708>**<U+FF08>8 <U+7EC6><U+5206><U+FF09><U+2014><U+2014> <U+4E0E><U+5382><U+5546><U+6587><U+6863><U+4E00><U+81F4> <U+2705><U+FF1B>
+      |                                                                                                                            ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:83:57: error: stray '\342' in program
+   83 |  *     <U+00B7> <U+7EC6><U+5206> `OFF ON OFF` <U+21D2> **1600 <U+8109><U+51B2>/<U+5708>**<U+FF08>8 <U+7EC6><U+5206><U+FF09><U+2014><U+2014> <U+4E0E><U+5382><U+5546><U+6587><U+6863><U+4E00><U+81F4> <U+2705><U+FF1B>
+      |                                                                                                                                    ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:83:74: error: stray '\342' in program
+   83 |  *     <U+00B7> <U+7EC6><U+5206> `OFF ON OFF` <U+21D2> **1600 <U+8109><U+51B2>/<U+5708>**<U+FF08>8 <U+7EC6><U+5206><U+FF09><U+2014><U+2014> <U+4E0E><U+5382><U+5546><U+6587><U+6863><U+4E00><U+81F4> <U+2705><U+FF1B>
+      |                                                                                                                                                                                                      ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:84:15: error: stray '`' in program
+   84 |  *     · 电流 `ON OFF OFF` ⇒ **2.0A**（峰值 2.2A）—— **厂商文档写的 0.5A 是错的，差 4 倍** ❌；
+      |               ^
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:84:26: error: stray '`' in program
+   84 |  *     · 电流 `ON OFF OFF` ⇒ **2.0A**（峰值 2.2A）—— **厂商文档写的 0.5A 是错的，差 4 倍** ❌；
+      |                          ^
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:84:28: error: stray '\342' in program
+   84 |  *     <U+00B7> <U+7535><U+6D41> `ON OFF OFF` <U+21D2> **2.0A**<U+FF08><U+5CF0><U+503C> 2.2A<U+FF09><U+2014><U+2014> **<U+5382><U+5546><U+6587><U+6863><U+5199><U+7684> 0.5A <U+662F><U+9519><U+7684><U+FF0C><U+5DEE> 4 <U+500D>** <U+274C><U+FF1B>
+      |                                               ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:84:32: error: invalid suffix "A" on floating constant
+   84 |  *     · 电流 `ON OFF OFF` ⇒ **2.0A**（峰值 2.2A）—— **厂商文档写的 0.5A 是错的，差 4 倍** ❌；
+      |                                ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:84:45: error: invalid suffix "A）" on floating constant
+   84 |  *     · 电流 `ON OFF OFF` ⇒ **2.0A**（峰值 2.2A）—— **厂商文档写的 0.5A 是错的，差 4 倍** ❌；
+      |                                             ^~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:84:51: error: stray '\342' in program
+   84 |  *     <U+00B7> <U+7535><U+6D41> `ON OFF OFF` <U+21D2> **2.0A**<U+FF08><U+5CF0><U+503C> 2.2A<U+FF09><U+2014><U+2014> **<U+5382><U+5546><U+6587><U+6863><U+5199><U+7684> 0.5A <U+662F><U+9519><U+7684><U+FF0C><U+5DEE> 4 <U+500D>** <U+274C><U+FF1B>
+      |                                                                                                     ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:84:52: error: stray '\342' in program
+   84 |  *     <U+00B7> <U+7535><U+6D41> `ON OFF OFF` <U+21D2> **2.0A**<U+FF08><U+5CF0><U+503C> 2.2A<U+FF09><U+2014><U+2014> **<U+5382><U+5546><U+6587><U+6863><U+5199><U+7684> 0.5A <U+662F><U+9519><U+7684><U+FF0C><U+5DEE> 4 <U+500D>** <U+274C><U+FF1B>
+      |                                                                                                             ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:84:69: error: invalid suffix "A" on floating constant
+   84 |  *     · 电流 `ON OFF OFF` ⇒ **2.0A**（峰值 2.2A）—— **厂商文档写的 0.5A 是错的，差 4 倍** ❌；
+      |                                                                     ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:84:92: error: stray '\342' in program
+   84 |  *     <U+00B7> <U+7535><U+6D41> `ON OFF OFF` <U+21D2> **2.0A**<U+FF08><U+5CF0><U+503C> 2.2A<U+FF09><U+2014><U+2014> **<U+5382><U+5546><U+6587><U+6863><U+5199><U+7684> 0.5A <U+662F><U+9519><U+7684><U+FF0C><U+5DEE> 4 <U+500D>** <U+274C><U+FF1B>
+      |                                                                                                                                                                                                                                    ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:85:33: error: invalid suffix "A" on floating constant
+   85 |  *     · 也就是说我们前面几轮按 0.5A 拨的时候，**电流只有 1/4**；
+      |                                 ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:86:34: error: invalid suffix "mm" on integer constant
+   86 |  *     · 而 Arduino 出厂速度是 **20mm/s**（= 16000 脉冲/s @800 步/mm），本工程 v4 退成了
+      |                                  ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:86:59: error: stray '@' in program
+   86 |  *     · 而 Arduino 出厂速度是 **20mm/s**（= 16000 脉冲/s @800 步/mm），本工程 v4 退成了
+      |                                                           ^
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:87:10: error: invalid suffix "mm" on integer constant
+   87 |  *       2mm/s（1600 脉冲/s，慢 10 倍）→ 正好落在步进电机的**低速共振区**：
+      |          ^~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:87:40: error: stray '\342' in program
+   87 |  *       2mm/s<U+FF08>1600 <U+8109><U+51B2>/s<U+FF0C><U+6162> 10 <U+500D><U+FF09><U+2192> <U+6B63><U+597D><U+843D><U+5728><U+6B65><U+8FDB><U+7535><U+673A><U+7684>**<U+4F4E><U+901F><U+5171><U+632F><U+533A>**<U+FF1A>
+      |                                                                                  ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:88:65: error: stray '\343' in program
+   88 |  *       <U+7535><U+6D41><U+672C><U+6765><U+5C31><U+4E0D><U+591F> + <U+9891><U+7387><U+53C8><U+4F4E><U+FF0C><U+8F6C><U+5B50><U+8DDF><U+4E0D><U+4E0A><U+5C31>**<U+539F><U+5730><U+6765><U+56DE><U+5FAE><U+6296>**<U+3002>
+      |                                                                                                                                                                                                                 ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:90:71: error: invalid suffix "）：" on integer constant
+   90 |  *   所以 v5 直接**照抄能跑通那版的三个运动参数**（board_config.h:432-434）：
+      |                                                                       ^~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:91:10: error: stray '`' in program
+   91 |  *     ① `MOTOR_SPEED_DEFAULT = 20`、`MOTOR_ACCEL/DECEL_DEFAULT = 150` —— 逐项一致：
+      |          ^
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:91:35: error: stray '`' in program
+   91 |  *     ① `MOTOR_SPEED_DEFAULT = 20`、`MOTOR_ACCEL/DECEL_DEFAULT = 150` —— 逐项一致：
+      |                                   ^
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:91:36: error: stray '\343' in program
+   91 |  *     <U+2460> `MOTOR_SPEED_DEFAULT = 20`<U+3001>`MOTOR_ACCEL/DECEL_DEFAULT = 150` <U+2014><U+2014> <U+9010><U+9879><U+4E00><U+81F4><U+FF1A>
+      |                                           ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:91:38: error: stray '`' in program
+   91 |  *     ① `MOTOR_SPEED_DEFAULT = 20`、`MOTOR_ACCEL/DECEL_DEFAULT = 150` —— 逐项一致：
+      |                                      ^
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:91:70: error: stray '`' in program
+   91 |  *     ① `MOTOR_SPEED_DEFAULT = 20`、`MOTOR_ACCEL/DECEL_DEFAULT = 150` —— 逐项一致：
+      |                                                                      ^
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:91:72: error: stray '\342' in program
+   91 |  *     <U+2460> `MOTOR_SPEED_DEFAULT = 20`<U+3001>`MOTOR_ACCEL/DECEL_DEFAULT = 150` <U+2014><U+2014> <U+9010><U+9879><U+4E00><U+81F4><U+FF1A>
+      |                                                                                     ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:91:73: error: stray '\342' in program
+   91 |  *     <U+2460> `MOTOR_SPEED_DEFAULT = 20`<U+3001>`MOTOR_ACCEL/DECEL_DEFAULT = 150` <U+2014><U+2014> <U+9010><U+9879><U+4E00><U+81F4><U+FF1A>
+      |                                                                                             ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:92:13: error: invalid suffix "mm" on integer constant
+   92 |  *        · 20mm/s 在**同一台机器上被 Arduino 版验证过能跑**；
+      |             ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:93:22: error: invalid suffix "（而不是更温和的" on integer constant
+   93 |  *        · accel 取 150（而不是更温和的 60/30）：0→20mm/s 只需 **0.133s**，
+      |                      ^~~~~~~~~~~~~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:93:45: error: invalid suffix "）：0" on integer constant
+   93 |  *        · accel 取 150（而不是更温和的 60/30）：0→20mm/s 只需 **0.133s**，
+      |                                             ^~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:93:52: error: stray '\342' in program
+   93 |  *        <U+00B7> accel <U+53D6> 150<U+FF08><U+800C><U+4E0D><U+662F><U+66F4><U+6E29><U+548C><U+7684> 60/30<U+FF09><U+FF1A>0<U+2192>20mm/s <U+53EA><U+9700> **0.133s**<U+FF0C>
+      |                                                                                                                             ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:93:53: error: invalid suffix "mm" on integer constant
+   93 |  *        · accel 取 150（而不是更温和的 60/30）：0→20mm/s 只需 **0.133s**，
+      |                                                     ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:93:67: error: invalid suffix "s" on floating constant
+   93 |  *        · accel 取 150（而不是更温和的 60/30）：0→20mm/s 只需 **0.133s**，
+      |                                                                   ^~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:94:47: error: stray '\343' in program
+   94 |  *          **<U+5FEB><U+901F>"<U+8DE8><U+8FC7>"<U+6B65><U+8FDB><U+7535><U+673A><U+7684><U+4F4E><U+901F><U+5171><U+632F><U+5E26>**<U+3002><U+52A0><U+901F><U+8D8A><U+6162><U+FF0C><U+7535><U+673A><U+5728><U+5171><U+632F><U+533A><U+505C><U+7559><U+8D8A><U+4E45> <U+2014><U+2014>
+      |                                                                                                                                   ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:94:80: error: stray '\342' in program
+   94 |  *          **<U+5FEB><U+901F>"<U+8DE8><U+8FC7>"<U+6B65><U+8FDB><U+7535><U+673A><U+7684><U+4F4E><U+901F><U+5171><U+632F><U+5E26>**<U+3002><U+52A0><U+901F><U+8D8A><U+6162><U+FF0C><U+7535><U+673A><U+5728><U+5171><U+632F><U+533A><U+505C><U+7559><U+8D8A><U+4E45> <U+2014><U+2014>
+      |                                                                                                                                                                                                                                                                    ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:94:81: error: stray '\342' in program
+   94 |  *          **<U+5FEB><U+901F>"<U+8DE8><U+8FC7>"<U+6B65><U+8FDB><U+7535><U+673A><U+7684><U+4F4E><U+901F><U+5171><U+632F><U+5E26>**<U+3002><U+52A0><U+901F><U+8D8A><U+6162><U+FF0C><U+7535><U+673A><U+5728><U+5171><U+632F><U+533A><U+505C><U+7559><U+8D8A><U+4E45> <U+2014><U+2014>
+      |                                                                                                                                                                                                                                                                            ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:95:64: error: invalid suffix "mm" on integer constant
+   95 |  *          "低速 + 电流不足"正是原地来回微抖的成因之一（v4 的 2mm/s 就落在那里）。
+      |                                                                ^~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:95:82: error: stray '\343' in program
+   95 |  *          "<U+4F4E><U+901F> + <U+7535><U+6D41><U+4E0D><U+8DB3>"<U+6B63><U+662F><U+539F><U+5730><U+6765><U+56DE><U+5FAE><U+6296><U+7684><U+6210><U+56E0><U+4E4B><U+4E00><U+FF08>v4 <U+7684> 2mm/s <U+5C31><U+843D><U+5728><U+90A3><U+91CC><U+FF09><U+3002>
+      |                                                                                                                                                                                                                                                    ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:96:24: error: invalid suffix "mm" on floating constant
+   96 |  *        · 变速距离 = 1.33mm(加速) + 1.33mm(减速) ≈ **2.67mm**：**行程短于它就到不了满速**
+      |                        ^~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:96:39: error: invalid suffix "mm" on floating constant
+   96 |  *        · 变速距离 = 1.33mm(加速) + 1.33mm(减速) ≈ **2.67mm**：**行程短于它就到不了满速**
+      |                                       ^~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:96:52: error: stray '\342' in program
+   96 |  *        <U+00B7> <U+53D8><U+901F><U+8DDD><U+79BB> = 1.33mm(<U+52A0><U+901F>) + 1.33mm(<U+51CF><U+901F>) <U+2248> **2.67mm**<U+FF1A>**<U+884C><U+7A0B><U+77ED><U+4E8E><U+5B83><U+5C31><U+5230><U+4E0D><U+4E86><U+6EE1><U+901F>**
+      |                                                                                                           ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:96:56: error: invalid suffix "mm" on floating constant
+   96 |  *        · 变速距离 = 1.33mm(加速) + 1.33mm(减速) ≈ **2.67mm**：**行程短于它就到不了满速**
+      |                                                        ^~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:97:46: error: stray '\342' in program
+   97 |  *          <U+FF08><U+4E09><U+89D2><U+5F62><U+66F2><U+7EBF><U+FF09><U+FF0C><U+73B0><U+573A><U+6D4B><U+8F6C><U+901F><U+8BF7><U+7528> **<U+2265>5mm** <U+7684><U+884C><U+7A0B><U+3002>
+      |                                                                                                                                        ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:97:47: error: invalid suffix "mm" on integer constant
+   97 |  *          （三角形曲线），现场测转速请用 **≥5mm** 的行程。
+      |                                               ^~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:97:59: error: stray '\343' in program
+   97 |  *          <U+FF08><U+4E09><U+89D2><U+5F62><U+66F2><U+7EBF><U+FF09><U+FF0C><U+73B0><U+573A><U+6D4B><U+8F6C><U+901F><U+8BF7><U+7528> **<U+2265>5mm** <U+7684><U+884C><U+7A0B><U+3002>
+      |                                                                                                                                                                              ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:98:50: error: stray '\343' in program
+   98 |  *     <U+2461> <U+62E8><U+7801><U+4EE5>"**<U+80FD><U+8DD1><U+901A><U+7684><U+90A3><U+5957>**"<U+4E3A><U+51C6><U+FF1A>**<U+53EA><U+6709> SW2<U+3001>SW4 <U+662F> ON**
+      |                                                                                                                                             ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:99:15: error: stray '`' in program
+   99 |  *        （= `OFF ON OFF | ON OFF OFF`：**1600 脉冲/圈（8 细分）+ 2.0A**，
+      |               ^
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:99:39: error: stray '`' in program
+   99 |  *        （= `OFF ON OFF | ON OFF OFF`：**1600 脉冲/圈（8 细分）+ 2.0A**，
+      |                                       ^
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:99:68: error: invalid suffix "A" on floating constant
+   99 |  *        （= `OFF ON OFF | ON OFF OFF`：**1600 脉冲/圈（8 细分）+ 2.0A**，
+      |                                                                    ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:100:42: error: stray '\343' in program
+  100 |  *          <U+73B0><U+573A> Arduino <U+7248><U+7528><U+7684><U+5C31><U+662F><U+8FD9><U+5957><U+FF09><U+3002><U+2605> <U+5382><U+5546><U+6587><U+6863><U+5199><U+7684> 0.5A <U+662F>**<U+9519><U+7684>**<U+FF08><U+8981> 2.0A<U+FF0C>
+      |                                                                                                      ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:100:44: error: stray '\342' in program
+  100 |  *          <U+73B0><U+573A> Arduino <U+7248><U+7528><U+7684><U+5C31><U+662F><U+8FD9><U+5957><U+FF09><U+3002><U+2605> <U+5382><U+5546><U+6587><U+6863><U+5199><U+7684> 0.5A <U+662F>**<U+9519><U+7684>**<U+FF08><U+8981> 2.0A<U+FF0C>
+      |                                                                                                              ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:100:59: error: invalid suffix "A" on floating constant
+  100 |  *          现场 Arduino 版用的就是这套）。★ 厂商文档写的 0.5A 是**错的**（要 2.0A，
+      |                                                           ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:100:79: error: invalid suffix "A，" on floating constant
+  100 |  *          现场 Arduino 版用的就是这套）。★ 厂商文档写的 0.5A 是**错的**（要 2.0A，
+      |                                                                               ^~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:101:22: error: stray '\342' in program
+  101 |  *          <U+5DEE> 4 <U+500D><U+FF09><U+2014><U+2014><U+6211><U+4EEC><U+524D><U+51E0><U+8F6E><U+6309> 0.5A <U+62E8><U+FF0C><U+6B63><U+662F>"<U+53EA><U+6296><U+4E0D><U+8F6C>"<U+7684><U+76F4><U+63A5><U+539F><U+56E0><U+FF1B>
+      |                                        ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:101:23: error: stray '\342' in program
+  101 |  *          <U+5DEE> 4 <U+500D><U+FF09><U+2014><U+2014><U+6211><U+4EEC><U+524D><U+51E0><U+8F6E><U+6309> 0.5A <U+62E8><U+FF0C><U+6B63><U+662F>"<U+53EA><U+6296><U+4E0D><U+8F6C>"<U+7684><U+76F4><U+63A5><U+539F><U+56E0><U+FF1B>
+      |                                                ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:101:37: error: invalid suffix "A" on floating constant
+  101 |  *          差 4 倍）——我们前几轮按 0.5A 拨，正是"只抖不转"的直接原因；
+      |                                     ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:102:53: error: stray '\343' in program
+  102 |  *          <U+7EC6><U+5206><U+90A3><U+90E8><U+5206><U+FF08>1600 <U+8109><U+51B2>/<U+5708><U+FF09><U+4E0E><U+5382><U+5546><U+6587><U+6863><U+4E00><U+81F4><U+3002>
+      |                                                                                                                                                           ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:103:28: error: too many decimal points in number
+  103 |  *        （main/README.md 9.2.1 ③ 已按实测重写，以那张表为最终依据）
+      |                            ^~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:105:6: error: stray '\342' in program
+  105 |  *   <U+2605> <U+5173><U+4E8E> v4<U+FF08><U+4FDD><U+7559><U+4E3A><U+5386><U+53F2><U+FF0C><U+522B><U+518D><U+7167><U+5B83><U+6539><U+FF09><U+FF1A>
+      |      ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:106:32: error: stray '\343' in program
+  106 |  *     <U+5382><U+5546><U+6587><U+6863><U+539F><U+6587><U+FF08><U+73B0><U+573A><U+63D0><U+4F9B><U+FF09><U+300C>SW1/SW2/SW3 <U+4E3A> 1600 <U+7EC6><U+5206><U+3001>SW4/SW5/SW6 <U+4E3A> 0.5A <U+8F93><U+51FA><U+7535><U+6D41>
+      |                                                                                                        ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:106:58: error: stray '\343' in program
+  106 |  *     <U+5382><U+5546><U+6587><U+6863><U+539F><U+6587><U+FF08><U+73B0><U+573A><U+63D0><U+4F9B><U+FF09><U+300C>SW1/SW2/SW3 <U+4E3A> 1600 <U+7EC6><U+5206><U+3001>SW4/SW5/SW6 <U+4E3A> 0.5A <U+8F93><U+51FA><U+7535><U+6D41>
+      |                                                                                                                                                          ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:106:75: error: invalid suffix "A" on floating constant
+  106 |  *     厂商文档原文（现场提供）「SW1/SW2/SW3 为 1600 细分、SW4/SW5/SW6 为 0.5A 输出电流
+      |                                                                           ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:108:22: error: stray '\343' in program
+  108 |  *     <U+7535><U+673A><U+8FD0><U+8F6C><U+4E2D><U+632F><U+52A8><U+3001><U+53D1><U+70EB><U+73B0><U+8C61><U+300D><U+2014><U+2014><U+8FD9><U+4EFD><U+6587><U+6863><U+4E0E><U+73B0><U+573A><U+5B9E><U+6D4B>**<U+77DB><U+76FE>**<U+FF0C><U+53EA><U+5F53><U+53C2><U+8003><U+3002>
+      |                                                                ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:108:32: error: stray '\343' in program
+  108 |  *     <U+7535><U+673A><U+8FD0><U+8F6C><U+4E2D><U+632F><U+52A8><U+3001><U+53D1><U+70EB><U+73B0><U+8C61><U+300D><U+2014><U+2014><U+8FD9><U+4EFD><U+6587><U+6863><U+4E0E><U+73B0><U+573A><U+5B9E><U+6D4B>**<U+77DB><U+76FE>**<U+FF0C><U+53EA><U+5F53><U+53C2><U+8003><U+3002>
+      |                                                                                                        ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:108:34: error: stray '\342' in program
+  108 |  *     <U+7535><U+673A><U+8FD0><U+8F6C><U+4E2D><U+632F><U+52A8><U+3001><U+53D1><U+70EB><U+73B0><U+8C61><U+300D><U+2014><U+2014><U+8FD9><U+4EFD><U+6587><U+6863><U+4E0E><U+73B0><U+573A><U+5B9E><U+6D4B>**<U+77DB><U+76FE>**<U+FF0C><U+53EA><U+5F53><U+53C2><U+8003><U+3002>
+      |                                                                                                                ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:108:35: error: stray '\342' in program
+  108 |  *     <U+7535><U+673A><U+8FD0><U+8F6C><U+4E2D><U+632F><U+52A8><U+3001><U+53D1><U+70EB><U+73B0><U+8C61><U+300D><U+2014><U+2014><U+8FD9><U+4EFD><U+6587><U+6863><U+4E0E><U+73B0><U+573A><U+5B9E><U+6D4B>**<U+77DB><U+76FE>**<U+FF0C><U+53EA><U+5F53><U+53C2><U+8003><U+3002>
+      |                                                                                                                        ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:108:72: error: stray '\343' in program
+  108 |  *     <U+7535><U+673A><U+8FD0><U+8F6C><U+4E2D><U+632F><U+52A8><U+3001><U+53D1><U+70EB><U+73B0><U+8C61><U+300D><U+2014><U+2014><U+8FD9><U+4EFD><U+6587><U+6863><U+4E0E><U+73B0><U+573A><U+5B9E><U+6D4B>**<U+77DB><U+76FE>**<U+FF0C><U+53EA><U+5F53><U+53C2><U+8003><U+3002>
+      |                                                                                                                                                                                                                                                                    ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:109:78: error: invalid suffix "）" on floating constant
+  109 |  *     它唯一仍成立的结论是：细分脉冲数是**脉冲/圈**，步数/mm 还要除导程（见 9.5）。
+      |                                                                              ^~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:109:83: error: stray '\343' in program
+  109 |  *     <U+5B83><U+552F><U+4E00><U+4ECD><U+6210><U+7ACB><U+7684><U+7ED3><U+8BBA><U+662F><U+FF1A><U+7EC6><U+5206><U+8109><U+51B2><U+6570><U+662F>**<U+8109><U+51B2>/<U+5708>**<U+FF0C><U+6B65><U+6570>/mm <U+8FD8><U+8981><U+9664><U+5BFC><U+7A0B><U+FF08><U+89C1> 9.5<U+FF09><U+3002>
+      |                                                                                                                                                                                                                                                                             ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:111:6: error: stray '\342' in program
+  111 |  *   <U+2605> <U+672C><U+6761><U+53EA><U+91CD><U+7F6E> speed/accel/decel<U+FF08>fac_ver <U+8FC1><U+79FB><U+FF09><U+FF0C>**<U+9650><U+4F4D>/<U+4F4D><U+7F6E>/<U+95F4><U+9699><U+4E00><U+5F8B><U+4E0D><U+52A8>**<U+3002>
+      |      ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:111:80: error: stray '\343' in program
+  111 |  *   <U+2605> <U+672C><U+6761><U+53EA><U+91CD><U+7F6E> speed/accel/decel<U+FF08>fac_ver <U+8FC1><U+79FB><U+FF09><U+FF0C>**<U+9650><U+4F4D>/<U+4F4D><U+7F6E>/<U+95F4><U+9699><U+4E00><U+5F8B><U+4E0D><U+52A8>**<U+3002>
+      |                                                                                                                                                                                                               ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:112:61: error: stray '\343' in program
+  112 |  *     <U+73B0><U+573A><U+4E0D><U+91CD><U+7F16><U+4E5F><U+80FD><U+7ACB><U+523B><U+8BD5><U+FF1A><U+5728> Admin <U+91CC><U+628A> Speed <U+6539><U+6210> 20.000<U+3001>accel <U+6539><U+6210> 60<U+3002>
+      |                                                                                                                                                             ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:112:76: error: stray '\343' in program
+  112 |  *     <U+73B0><U+573A><U+4E0D><U+91CD><U+7F16><U+4E5F><U+80FD><U+7ACB><U+523B><U+8BD5><U+FF1A><U+5728> Admin <U+91CC><U+628A> Speed <U+6539><U+6210> 20.000<U+3001>accel <U+6539><U+6210> 60<U+3002>
+      |                                                                                                                                                                                              ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:114:4: error: stray '\342' in program
+  114 |  * <U+2605> APP_CFG_FACTORY_VERSION<U+FF1A><U+51FA><U+5382><U+503C><U+8FC1><U+79FB><U+7248><U+672C>
+      |    ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:115:50: error: stray '\343' in program
+  115 |  *   NVS <U+91CC><U+5B58><U+7740><U+4E0A><U+4E00><U+6B21><U+7684><U+503C><U+65F6><U+FF0C><U+4F1A><U+76D6><U+6389><U+8FD9><U+91CC><U+7684><U+65B0><U+51FA><U+5382><U+503C><U+3002><U+6240><U+4EE5> app_config_init()
+      |                                                                                                                                                                          ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:117:84: error: stray '\343' in program
+  117 |  *   <U+5F3A><U+5236><U+5199><U+6210><U+65B0><U+51FA><U+5382><U+503C>**<U+FF0C><U+800C><U+9650><U+4F4D> / <U+4F4D><U+7F6E> / <U+53CD><U+5411><U+95F4><U+9699><U+4FDD><U+6301><U+4E0D><U+52A8><U+FF08><U+5DF2><U+6807><U+5B9A><U+7684><U+5750><U+6807><U+7CFB><U+4E0D><U+53D7><U+5F71><U+54CD><U+FF09><U+3002>
+      |                                                                                                                                                                                                                                                                                                      ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:118:32: error: stray '\343' in program
+  118 |  *   <U+8FD9><U+6837><U+73B0><U+573A><U+4E0D><U+9700><U+8981> erase-flash<U+3001><U+4E5F><U+4E0D><U+9700><U+8981><U+8FDB> Admin <U+624B><U+5DE5><U+6539><U+3002>
+      |                                                                          ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:118:57: error: stray '\343' in program
+  118 |  *   <U+8FD9><U+6837><U+73B0><U+573A><U+4E0D><U+9700><U+8981> erase-flash<U+3001><U+4E5F><U+4E0D><U+9700><U+8981><U+8FDB> Admin <U+624B><U+5DE5><U+6539><U+3002>
+      |                                                                                                                                                         ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:119:46: error: stray '\343' in program
+  119 |  *   <U+4EE5><U+540E><U+6BCF><U+6B21><U+8C03><U+6574><U+51FA><U+5382><U+9ED8><U+8BA4><U+503C><U+FF0C><U+628A><U+7248><U+672C><U+53F7> +1 <U+5373><U+53EF><U+3002>
+      |                                                                                                                                                          ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:120:20: error: invalid suffix "mm" on integer constant
+  120 |  *      v1：20mm/s,150mm/s² → 2mm/s,30mm/s²（现场"只震不转"调试期的保守值）
+      |                    ^~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:120:29: error: stray '\342' in program
+  120 |  *      v1<U+FF1A>20mm/s,150mm/s<U+00B2> <U+2192> 2mm/s,30mm/s<U+00B2><U+FF08><U+73B0><U+573A>"<U+53EA><U+9707><U+4E0D><U+8F6C>"<U+8C03><U+8BD5><U+671F><U+7684><U+4FDD><U+5B88><U+503C><U+FF09>
+      |                                          ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:120:31: error: invalid suffix "mm" on integer constant
+  120 |  *      v1：20mm/s,150mm/s² → 2mm/s,30mm/s²（现场"只震不转"调试期的保守值）
+      |                               ^~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:120:37: error: invalid suffix "mm" on integer constant
+  120 |  *      v1：20mm/s,150mm/s² → 2mm/s,30mm/s²（现场"只震不转"调试期的保守值）
+      |                                     ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:121:19: error: invalid suffix "mm" on integer constant
+  121 |  *      v2：2mm/s,30mm/s²   → 10mm/s,60mm/s²（确认硬件正常后的可用值）
+      |                   ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:121:29: error: stray '\342' in program
+  121 |  *      v2<U+FF1A>2mm/s,30mm/s<U+00B2>   <U+2192> 10mm/s,60mm/s<U+00B2><U+FF08><U+786E><U+8BA4><U+786C><U+4EF6><U+6B63><U+5E38><U+540E><U+7684><U+53EF><U+7528><U+503C><U+FF09>
+      |                                          ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:121:31: error: invalid suffix "mm" on integer constant
+  121 |  *      v2：2mm/s,30mm/s²   → 10mm/s,60mm/s²（确认硬件正常后的可用值）
+      |                               ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:121:38: error: invalid suffix "mm" on integer constant
+  121 |  *      v2：2mm/s,30mm/s²   → 10mm/s,60mm/s²（确认硬件正常后的可用值）
+      |                                      ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:122:20: error: invalid suffix "mm" on integer constant
+  122 |  *      v3：10mm/s,60mm/s²  → 20mm/s,60mm/s²（与现场参考波形 15.5kHz 对齐；脉宽也改回 5µs）
+      |                    ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:122:29: error: stray '\342' in program
+  122 |  *      v3<U+FF1A>10mm/s,60mm/s<U+00B2>  <U+2192> 20mm/s,60mm/s<U+00B2><U+FF08><U+4E0E><U+73B0><U+573A><U+53C2><U+8003><U+6CE2><U+5F62> 15.5kHz <U+5BF9><U+9F50><U+FF1B><U+8109><U+5BBD><U+4E5F><U+6539><U+56DE> 5<U+00B5>s<U+FF09>
+      |                                          ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:122:31: error: invalid suffix "mm" on integer constant
+  122 |  *      v3：10mm/s,60mm/s²  → 20mm/s,60mm/s²（与现场参考波形 15.5kHz 对齐；脉宽也改回 5µs）
+      |                               ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:122:38: error: invalid suffix "mm" on integer constant
+  122 |  *      v3：10mm/s,60mm/s²  → 20mm/s,60mm/s²（与现场参考波形 15.5kHz 对齐；脉宽也改回 5µs）
+      |                                      ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:122:62: error: invalid suffix "kHz" on floating constant
+  122 |  *      v3：10mm/s,60mm/s²  → 20mm/s,60mm/s²（与现场参考波形 15.5kHz 对齐；脉宽也改回 5µs）
+      |                                                              ^~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:122:87: error: invalid suffix "µs）" on integer constant
+  122 |  *      v3：10mm/s,60mm/s²  → 20mm/s,60mm/s²（与现场参考波形 15.5kHz 对齐；脉宽也改回 5µs）
+      |                                                                                       ^~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:123:20: error: invalid suffix "mm" on integer constant
+  123 |  *      v4：20mm/s,60mm/s²  → 2mm/s,30mm/s²（当时按厂商"1600 脉冲/圈 + 0.5A"口径退的，
+      |                    ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:123:29: error: stray '\342' in program
+  123 |  *      v4<U+FF1A>20mm/s,60mm/s<U+00B2>  <U+2192> 2mm/s,30mm/s<U+00B2><U+FF08><U+5F53><U+65F6><U+6309><U+5382><U+5546>"1600 <U+8109><U+51B2>/<U+5708> + 0.5A"<U+53E3><U+5F84><U+9000><U+7684><U+FF0C>
+      |                                          ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:123:31: error: invalid suffix "mm" on integer constant
+  123 |  *      v4：20mm/s,60mm/s²  → 2mm/s,30mm/s²（当时按厂商"1600 脉冲/圈 + 0.5A"口径退的，
+      |                               ^~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:123:37: error: invalid suffix "mm" on integer constant
+  123 |  *      v4：20mm/s,60mm/s²  → 2mm/s,30mm/s²（当时按厂商"1600 脉冲/圈 + 0.5A"口径退的，
+      |                                     ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:124:84: error: stray '\342' in program
+  124 |  *                                        **<U+5DF2><U+88AB><U+73B0><U+573A><U+5B9E><U+6D4B><U+63A8><U+7FFB>**<U+FF1A><U+80FD><U+8DD1><U+901A><U+7684><U+662F> SW4=OFF(<U+2265>2.5A)<U+FF09>
+      |                                                                                                                                                                        ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:124:85: error: invalid suffix "A" on floating constant
+  124 |  *                                        **已被现场实测推翻**：能跑通的是 SW4=OFF(≥2.5A)）
+      |                                                                                     ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:125:19: error: invalid suffix "mm" on integer constant
+  125 |  *      v5：2mm/s,30mm/s²   → 20mm/s,150mm/s²（**照抄 Arduino 能跑通那版的
+      |                   ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:125:29: error: stray '\342' in program
+  125 |  *      v5<U+FF1A>2mm/s,30mm/s<U+00B2>   <U+2192> 20mm/s,150mm/s<U+00B2><U+FF08>**<U+7167><U+6284> Arduino <U+80FD><U+8DD1><U+901A><U+90A3><U+7248><U+7684>
+      |                                          ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:125:31: error: invalid suffix "mm" on integer constant
+  125 |  *      v5：2mm/s,30mm/s²   → 20mm/s,150mm/s²（**照抄 Arduino 能跑通那版的
+      |                               ^~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:125:38: error: invalid suffix "mm" on integer constant
+  125 |  *      v5：2mm/s,30mm/s²   → 20mm/s,150mm/s²（**照抄 Arduino 能跑通那版的
+      |                                      ^~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:127:20: error: invalid suffix "mm" on integer constant
+  127 |  *      v6：20mm/s,150mm/s² → **1mm/s,4mm/s²**（依据是 2026-09-22 现场阶梯扫频实测：
+      |                    ^~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:127:29: error: stray '\342' in program
+  127 |  *      v6<U+FF1A>20mm/s,150mm/s<U+00B2> <U+2192> **1mm/s,4mm/s<U+00B2>**<U+FF08><U+4F9D><U+636E><U+662F> 2026-09-22 <U+73B0><U+573A><U+9636><U+68AF><U+626B><U+9891><U+5B9E><U+6D4B><U+FF1A>
+      |                                          ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:127:33: error: invalid suffix "mm" on integer constant
+  127 |  *      v6：20mm/s,150mm/s² → **1mm/s,4mm/s²**（依据是 2026-09-22 现场阶梯扫频实测：
+      |                                 ^~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:127:39: error: invalid suffix "mm" on integer constant
+  127 |  *      v6：20mm/s,150mm/s² → **1mm/s,4mm/s²**（依据是 2026-09-22 现场阶梯扫频实测：
+      |                                       ^~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:127:61: error: invalid digit "9" in octal constant
+  127 |  *      v6：20mm/s,150mm/s² → **1mm/s,4mm/s²**（依据是 2026-09-22 现场阶梯扫频实测：
+      |                                                             ^~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:128:25: error: invalid suffix "Hz" on integer constant
+  128 |  *         这台机器在 **1200Hz 以上开始抖**，上限约 1200Hz。脉冲上限同步从 20000
+      |                         ^~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:128:53: error: invalid suffix "Hz" on integer constant
+  128 |  *         这台机器在 **1200Hz 以上开始抖**，上限约 1200Hz。脉冲上限同步从 20000
+      |                                                     ^~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:128:59: error: stray '\343' in program
+  128 |  *         <U+8FD9><U+53F0><U+673A><U+5668><U+5728> **1200Hz <U+4EE5><U+4E0A><U+5F00><U+59CB><U+6296>**<U+FF0C><U+4E0A><U+9650><U+7EA6> 1200Hz<U+3002><U+8109><U+51B2><U+4E0A><U+9650><U+540C><U+6B65><U+4ECE> 20000
+      |                                                                                                                                               ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:129:17: error: invalid suffix "（见" on integer constant
+  129 |  *         收到 1000（见 app_motion.h 的 MOTION_STEP_FREQ_MAX_HZ 处的长注释）；
+      |                 ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:130:23: error: invalid suffix "Hz" on integer constant
+  130 |  *         出厂速度取 800Hz = 1.0mm/s，加速率 4mm/s² = 3200Hz/s，起步温和。）
+      |                       ^~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:130:31: error: invalid suffix "mm" on floating constant
+  130 |  *         出厂速度取 800Hz = 1.0mm/s，加速率 4mm/s² = 3200Hz/s，起步温和。）
+      |                               ^~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:130:47: error: invalid suffix "mm" on integer constant
+  130 |  *         出厂速度取 800Hz = 1.0mm/s，加速率 4mm/s² = 3200Hz/s，起步温和。）
+      |                                               ^~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:130:56: error: invalid suffix "Hz" on integer constant
+  130 |  *         出厂速度取 800Hz = 1.0mm/s，加速率 4mm/s² = 3200Hz/s，起步温和。）
+      |                                                        ^~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:130:74: error: stray '\343' in program
+  130 |  *         <U+51FA><U+5382><U+901F><U+5EA6><U+53D6> 800Hz = 1.0mm/s<U+FF0C><U+52A0><U+901F><U+7387> 4mm/s<U+00B2> = 3200Hz/s<U+FF0C><U+8D77><U+6B65><U+6E29><U+548C><U+3002><U+FF09>
+      |                                                                                                                                                                     ^~~~~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c: In function 'app_config_get':
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:192:12: error: 's_cfg' undeclared (first use in this function)
+  192 |     return s_cfg;
+      |            ^~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:192:12: note: each undeclared identifier is reported only once for each function it appears in
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c: In function 'nvs_migrate_factory_params':
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:346:31: error: 's_cfg' undeclared (first use in this function)
+  346 |         app_config_set_field(&s_cfg, reset_fields[i], v);
+      |                               ^~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c: In function 'app_config_init':
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:363:5: error: 's_cfg' undeclared (first use in this function)
+  363 |     s_cfg = app_config_defaults();
+      |     ^~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c: In function 'app_config_commit_async':
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:408:5: error: 's_cfg' undeclared (first use in this function); did you mean 'cfg'?
+  408 |     s_cfg = *cfg;
+      |     ^~~~~
+      |     cfg
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c: In function 'app_config_save_position_async':
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:417:5: error: 's_cfg' undeclared (first use in this function)
+  417 |     s_cfg.pos = pos;
+      |     ^~~~~
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c: In function 'app_config_get':
+D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/main/app_config.c:193:1: error: control reaches end of non-void function [-Werror=return-type]
+  193 | }
+      | ^
+cc1.exe: some warnings being treated as errors
+[5/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/ui_main.c.obj
+[6/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+[7/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_state.c.obj
+[8/14] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_motion.c.obj
+ninja: build stopped: subcommand failed.

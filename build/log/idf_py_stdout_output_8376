@@ -1,0 +1,102 @@
+Command: ninja flash
+[1/11] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\ESP32-IDF\esp-idf-v5.5.1\examples\get-started\Mult_RollCoaterHMI\build\bootloader\esp-idf\esptool_py && C:\Users\DELL\.espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe D:/ESP32-IDF/esp-idf-v5.5.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/build/bootloader/bootloader.bin"
+Bootloader binary size 0x57e0 bytes. 0x2820 bytes (31%) free.
+[2/11] No install step for 'bootloader'
+[3/11] Completed 'bootloader'
+[4/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_config.c.obj
+[5/11] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/app_motion.c.obj
+[6/11] Linking C static library esp-idf\main\libmain.a
+[7/11] Generating esp-idf/esp_system/ld/sections.ld
+[8/11] Linking CXX executable roll_coater_hmi.elf
+[9/11] Generating binary image from built executable
+esptool.py v4.12.0
+Creating esp32s3 image...
+Merged 2 ELF sections
+Successfully created esp32s3 image.
+Generated D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/build/roll_coater_hmi.bin
+[10/11] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\ESP32-IDF\esp-idf-v5.5.1\examples\get-started\Mult_RollCoaterHMI\build\esp-idf\esptool_py && C:\Users\DELL\.espressif\python_env\idf5.5_py3.13_env\Scripts\python.exe D:/ESP32-IDF/esp-idf-v5.5.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/build/partition_table/partition-table.bin D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/build/roll_coater_hmi.bin"
+roll_coater_hmi.bin binary size 0x139f90 bytes. Smallest app partition is 0x400000 bytes. 0x2c6070 bytes (69%) free.
+[10/11] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\ESP32-IDF\esp-idf-v5.5.1\components\esptool_py && C:\Users\DELL\.espressif\tools\cmake\3.30.2\bin\cmake.exe -D IDF_PATH=D:/ESP32-IDF/esp-idf-v5.5.1 -D SERIAL_TOOL=C:/Users/DELL/.espressif/python_env/idf5.5_py3.13_env/Scripts/python.exe;;D:/ESP32-IDF/esp-idf-v5.5.1/components/esptool_py/esptool/esptool.py;--chip;esp32s3 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=D:/ESP32-IDF/esp-idf-v5.5.1/examples/get-started/Mult_RollCoaterHMI/build -P D:/ESP32-IDF/esp-idf-v5.5.1/components/esptool_py/run_serial_tool.cmake"
+esptool.py --chip esp32s3 -p COM6 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 8MB 0x0 bootloader/bootloader.bin 0x10000 roll_coater_hmi.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.12.0
+Serial port COM6
+Connecting....
+Chip is ESP32-S3 (QFN56) (revision v0.2)
+Features: WiFi, BLE, Embedded PSRAM 8MB (AP_3v3)
+Crystal is 40MHz
+MAC: ac:27:6e:a4:a1:b8
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00000000 to 0x00005fff...
+Flash will be erased from 0x00010000 to 0x00149fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 22496 bytes to 14271...
+Writing at 0x00000000... (100 %)
+Wrote 22496 bytes (14271 compressed) at 0x00000000 in 0.6 seconds (effective 307.6 kbit/s)...
+Hash of data verified.
+Compressed 1286032 bytes to 805883...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001be75... (4 %)
+Writing at 0x0002880a... (6 %)
+Writing at 0x000346b5... (8 %)
+Writing at 0x0003f4b3... (10 %)
+Writing at 0x000472be... (12 %)
+Writing at 0x00053af6... (14 %)
+Writing at 0x0005cbf2... (16 %)
+Writing at 0x00064c88... (18 %)
+Writing at 0x0006a863... (20 %)
+Writing at 0x00070142... (22 %)
+Writing at 0x000755b6... (24 %)
+Writing at 0x0007acc4... (26 %)
+Writing at 0x00080139... (28 %)
+Writing at 0x00085155... (30 %)
+Writing at 0x0008a7bf... (32 %)
+Writing at 0x0008faba... (34 %)
+Writing at 0x00096163... (36 %)
+Writing at 0x0009afeb... (38 %)
+Writing at 0x000a066a... (40 %)
+Writing at 0x000a5946... (42 %)
+Writing at 0x000ab6de... (44 %)
+Writing at 0x000b0930... (46 %)
+Writing at 0x000b5a61... (48 %)
+Writing at 0x000bac9b... (50 %)
+Writing at 0x000bfe19... (52 %)
+Writing at 0x000c5567... (54 %)
+Writing at 0x000cad8e... (56 %)
+Writing at 0x000d0132... (58 %)
+Writing at 0x000d52c3... (60 %)
+Writing at 0x000da398... (62 %)
+Writing at 0x000dfa27... (64 %)
+Writing at 0x000e526c... (66 %)
+Writing at 0x000ea6ce... (68 %)
+Writing at 0x000efadc... (70 %)
+Writing at 0x000f5109... (72 %)
+Writing at 0x000fb00d... (74 %)
+Writing at 0x000ffff6... (76 %)
+Writing at 0x0010511f... (78 %)
+Writing at 0x0010a265... (80 %)
+Writing at 0x0010f907... (82 %)
+Writing at 0x00115297... (84 %)
+Writing at 0x0011f2f9... (86 %)
+Writing at 0x00125def... (88 %)
+Writing at 0x0012b44e... (90 %)
+Writing at 0x00132307... (92 %)
+Writing at 0x00137d33... (94 %)
+Writing at 0x0013d876... (96 %)
+Writing at 0x0014361d... (98 %)
+Writing at 0x0014878d... (100 %)
+Wrote 1286032 bytes (805883 compressed) at 0x00010000 in 18.2 seconds (effective 564.2 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 105...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (105 compressed) at 0x00008000 in 0.0 seconds (effective 511.8 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
